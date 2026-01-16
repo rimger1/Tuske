@@ -1,16 +1,17 @@
-#tuske {
+#test{
+    text-align: center;
+    background-image: url(kepek/hatter.png);
+    background-repeat: repeat-y;
+}
+#tuske{
     background-image: url(kepek/TUSKE_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 800px;
     aspect-ratio: 16/6;
     margin: 0 auto;
+    margin-top: 50px;
 }
-#main{
-    text-align: center;
-    background-image: ;
-}
-
 #start{
     all: unset;
     background-image: url(kepek/TUSKE_start.png);
@@ -20,9 +21,8 @@
     aspect-ratio: 16/9;
     margin: 0 auto;
     display: block;
-    margin-top: 200px;
+    margin-top: 130px;
 }
-
 #kreditek{
     all: unset;
     background-image: url(kepek/TUSKE_kreditek.png);
@@ -33,5 +33,23 @@
     margin: 0 auto;
     display: block;
     margin-top: 50px;
-
 }
+#rights{
+    bottom: 0;
+    margin-bottom: 25px;
+    position: absolute;
+    width: 99vw;
+    text-align: center;
+}
+#from{
+    margin-top: 65px;
+}
+#logo{
+    background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
+    aspect-ratio: 1/1;
+    width: 80px;
+    background-size: cover;
+    float: right;
+    margin-right: 30px;
+}
+#from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
