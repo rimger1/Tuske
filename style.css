@@ -159,10 +159,12 @@
 
 #jatektest{
     
+    display : flex;
+    align-items: center;
     text-align: center;
     background-image: url(kepek/time\ machinehome.png);
     background-repeat: no-repeat;
-    height:50vw ;
+    height:943px;
     bottom: 0;
     
     background-size: cover;
@@ -184,12 +186,18 @@
 
 #balKarakter{
     background-image: url(kepek/szog.png);
+    
     background-size: cover;
-    width: 20%;
-    height: 20%;
+    aspect-ratio: 1/1;
+ 
+    height: 400px;
 }
 #jobbKarakter{
     background-image: url(kepek/tuske.png);
+    background-size: cover;
+    aspect-ratio: 1/1;
+ 
+    height: 400px;
 }
 #szovegmezo{
     
