@@ -141,14 +141,14 @@
     background-size: cover;
     margin: auto;
     margin-bottom: 2%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 #rights2{
-    color:rgb(97, 97, 97);
+    color:rgb(133, 133, 133);
     font-family: "Indie Flower", cursive;   
     font-weight: 400;   
     font-style: normal; 
-    margin-bottom: 6%;
+    margin-bottom: 3.5%;
 }
 #from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
 
