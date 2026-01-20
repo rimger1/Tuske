@@ -66,3 +66,17 @@
     margin-right: 30px;
 }
 #from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
+
+#jatekTest{
+    aspect-ratio: 16/9;
+    width: 100%;
+
+}
+#flexszitu{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#szovegmezo{
+    
+}
