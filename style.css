@@ -152,7 +152,19 @@
     font-style: normal; 
     margin-bottom: 3.5%;
 }
-
+#vissza{
+    all: unset;
+    background-image: url(kepek/TUSKE_vissza.png);
+    aspect-ratio: 16/9;
+    width: 140px;
+    background-size: cover;
+    left: 150px;
+    position: fixed;
+    transition: 0.3s ease;
+}
+#vissza:hover{
+    transform: scale(1.1);
+}
 
 /*ez nem tom mi*/
 #from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
