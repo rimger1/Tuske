@@ -152,15 +152,38 @@
 }
 #from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
 
-#jatekTest{
-    aspect-ratio: 16/9;
-    width: 100%;
+#jatektest{
+    
+    text-align: center;
+    background-image: url(kepek/time\ machinehome.png);
+    background-repeat: no-repeat;
+    height:50vw ;
+    bottom: 0;
+    
+    background-size: cover;
 
 }
-#flexszitu{
-    display: flex;
-    justify-content: space-evenly;
 
+    #flexszitu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%; 
+        height: 100px; 
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+
+
+#balKarakter{
+    background-image: url(kepek/szog.png);
+    background-size: cover;
+    width: 20%;
+    height: 20%;
+}
+#jobbKarakter{
+    background-image: url(kepek/tuske.png);
 }
 #szovegmezo{
     
