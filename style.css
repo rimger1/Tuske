@@ -12,6 +12,9 @@
     margin: 0 auto;
     margin-top: 50px;
 }
+#rights{
+    color:rgb(97, 97, 97);
+}
 #start{
     all: unset;
     background-image: url(kepek/TUSKE_start.png);
@@ -43,6 +46,7 @@
 }
 #from{
     margin-top: 65px;
+
 }
 #logo{
     background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
