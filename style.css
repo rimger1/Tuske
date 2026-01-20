@@ -71,6 +71,8 @@
     font-weight: 400;   
     font-style: normal; 
 }
+
+/*kreditek*/
 .h1{
     font-family: "Indie Flower", cursive;   
     font-weight: 1000;   
@@ -150,8 +152,13 @@
     font-style: normal; 
     margin-bottom: 3.5%;
 }
+
+
+/*ez nem tom mi*/
 #from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
 
+
+/* play*/
 #jatekTest{
     aspect-ratio: 16/9;
     width: 100%;
