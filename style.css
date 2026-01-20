@@ -92,9 +92,61 @@
     font-size: 24px;
     margin-bottom: 2%;
 }
+.nev{
+    font-family: "Indie Flower", cursive;   
+    font-weight: 300;   
+    font-style: normal; 
+    font-size: 30px;
+    margin-bottom: 2%;
+}
 #szog_kep{
     background-image: url(kepek/szog.png);
     aspect-ratio: 1/1;
+    width: 400px;
+    background-size: cover;
+    margin: auto;
+}
+#tuske_kep{
+    background-image: url(kepek/tuske.png);
+    aspect-ratio: 1/1;
+    width: 400px;
+    background-size: cover;
+    margin: auto;
+}
+#oreg_kep{
+    background-image: url(kepek/oreg.png);
+    aspect-ratio: 1/1;
+    width: 400px;
+    background-size: cover;
+    margin: auto;
+}
+#dorottya_kep{
+    background-image: url(kepek/dorottya.png);
+    aspect-ratio: 1/1;
+    width: 400px;
+    background-size: cover;
+    margin: auto;
+}
+#rendor_kep{
+    background-image: url(kepek/rendor.png);
+    aspect-ratio: 1/1;
+    width: 400px;
+    background-size: cover;
+    margin: auto;
+}
+#prodlogo{
+    background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
+    aspect-ratio: 1/1;
     width: 80px;
     background-size: cover;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+#rights2{
+    color:rgb(97, 97, 97);
+    font-family: "Indie Flower", cursive;   
+    font-weight: 400;   
+    font-style: normal; 
+    margin-bottom: 6%;
 }
