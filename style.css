@@ -206,17 +206,40 @@
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 200px;
+    top: 250px;
     height: 400px;
     right: 0;
 }
-#szovegMezo{    
+#szovegMezo{   
     background-image: url(kepek/hatter.png);
     background-size: cover;
     position: absolute;
     text-align: center;
     aspect-ratio: 16/9;
-    width: 200px;
-    bottom: 0;
-    margin: 0 auto;
+    width: 90%;
+    height: 240px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#karakterNev{
+    font-family: "Indie Flower", cursive; 
+    text-align: left;
+    color: blue;
+    margin-top: 5px;
+    margin-bottom:0px;
+    padding-left: 9%;
+    font-weight: 700;
+    font-size: 40px;
+}
+#karakterSzoveg{
+    font-family: "Indie Flower", cursive; 
+    text-align: left;
+    color: blue;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 15%;
+    padding-right: 9%;
+    font-weight: 700;
+    font-size: 25px;
 }
