@@ -1,3 +1,4 @@
+/*fouoldal*/
 #test{
     text-align: center;
     background-image: url(kepek/hatter.png);
@@ -25,7 +26,7 @@
     aspect-ratio: 16/9;
     margin: 0 auto;
     display: block;
-    margin-top: 130px;
+    margin-top: 90px;
     transition: 0.3s ease;
 }
 #start:hover{
@@ -40,9 +41,8 @@
     aspect-ratio: 16/9;
     margin: 0 auto;
     display: block;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: 0.3s ease;
-
 }
 #kreditek:hover{
     transform: scale(1.1);
@@ -70,6 +70,21 @@
     font-family: "Indie Flower", cursive;   
     font-weight: 400;   
     font-style: normal; 
+}
+#iranyitas{
+    all: unset;
+    background-image: url(kepek/TUSKE_iranyitas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 130px;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    transition: 0.3s ease;
+}
+#iranyitas:hover{    
+    transform: scale(1.1);
 }
 
 /*kreditek*/
