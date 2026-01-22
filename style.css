@@ -87,6 +87,56 @@
     transform: scale(1.1);
 }
 
+/*iranyitas*/
+.iranyitasszoveg{
+    font-family: "Indie Flower", cursive;   
+    font-weight: 200;   
+    font-style: normal; 
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 47%;
+}
+#leftclick{
+    background-image: url(kepek/TUSKE_leftclick.png);
+    aspect-ratio: 1/1;
+    width: 100px;
+    background-size: cover;
+    margin: auto;
+}
+#items{
+    background-image: url(kepek/TUSKE_items.png);
+    aspect-ratio: 16/9;
+    width: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#tovabb{
+    background-image: url(kepek/TUSKE_tovabb_withshadow.png);
+    aspect-ratio: 16/9;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#arrow{
+    background-image: url(kepek/TUSKE_arrow.png);
+    aspect-ratio: 1/1;
+    width: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#itemarrow{
+    background-image: url(kepek/TUSKE_itemarrow.png);
+    aspect-ratio: 16/9;
+    width: 190px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
 /*kreditek*/
 .h1{
     font-family: "Indie Flower", cursive;   
