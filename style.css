@@ -236,52 +236,37 @@
 
 /* play*/
 #jatektest{
-    
-    
     background-image: url(kepek/time\ machinehome.png);
     background-repeat: no-repeat;
-    height: 913px;;
+    height: 99vw;
     bottom: 0;
-    background-size: cover;
-    
+    background-size: contain;
 }
-
-
-
-
 #balKarakter{
     background-image: url(kepek/szog.png);
-    
     background-size: cover;
+    position: absolute;
     aspect-ratio: 1/1;
     transform:scaleX(-1);
-    float: left;
-    
-    bottom: 100;
-    left: 200;
- 
+    top: 100px;
     height: 600px;
 }
 #jobbKarakter{
     background-image: url(kepek/tuske.png);
     background-size: cover;
+    position: absolute;
     aspect-ratio: 1/1;
-    float: right;
-    bottom: 100;
-    right: 200;
- 
+    top: 200px;
     height: 400px;
+    right: 0;
 }
-#szovegmezo{
-    position: absolute; 
-    bottom: 0;
-    background-image: url(kepek/szovegmezo.png);
+#szovegMezo{    
+    background-image: url(kepek/hatter.png);
     background-size: cover;
-    width: 200px; 
-    height: 200px; 
-    margin-left: auto;
-    margin-right: auto;
-    
-
-    
+    position: absolute;
+    text-align: center;
+    aspect-ratio: 16/9;
+    width: 200px;
+    bottom: 0;
+    margin: 0 auto;
 }
