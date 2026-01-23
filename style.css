@@ -258,9 +258,9 @@
 #jatektest{
     background-image: url(kepek/time\ machinehome.png);
     background-repeat: no-repeat;
-    height: 99vw;
+    height: 98vh;
     bottom: 0;
-    background-size: contain;
+    background-size: cover;
 }
 #balKarakter{
     background-image: url(kepek/szog.png);
@@ -268,17 +268,18 @@
     position: absolute;
     aspect-ratio: 1/1;
     transform:scaleX(-1);
-    top: 100px;
+    top: 120px;
     height: 600px;
+    left: 10%;
 }
 #jobbKarakter{
     background-image: url(kepek/tuske.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 250px;
-    height: 400px;
-    right: 0;
+    top: 147px;
+    height: 560px;
+    right: 10%;
 }
 #szovegMezo{   
     background-image: url(kepek/hatter.png);
@@ -287,16 +288,16 @@
     text-align: center;
     aspect-ratio: 16/9;
     width: 90%;
-    height: 240px;
-    bottom: 100px;
+    height: 270px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
 }
 #karakterNev{
     font-family: "Indie Flower", cursive; 
     text-align: left;
-    color: blue;
-    margin-top: 5px;
+    color: black;
+    margin-top: 0px;
     margin-bottom:0px;
     padding-left: 9%;
     font-weight: 700;
@@ -305,7 +306,7 @@
 #karakterSzoveg{
     font-family: "Indie Flower", cursive; 
     text-align: left;
-    color: blue;
+    color: black;
     margin-bottom: 0px;
     margin-top: 0px;
     padding-left: 15%;
