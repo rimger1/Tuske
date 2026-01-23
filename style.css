@@ -88,6 +88,15 @@
 }
 
 /*iranyitas*/
+.iranyszoveg{
+    font-family: "Indie Flower", cursive;   
+    font-weight: 200;   
+    font-style: normal; 
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 40%;
+}
 .iranyitasszoveg{
     font-family: "Indie Flower", cursive;   
     font-weight: 200;   
@@ -102,7 +111,10 @@
     aspect-ratio: 1/1;
     width: 100px;
     background-size: cover;
+    background-repeat: no-repeat;
     margin: auto;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 #items{
     background-image: url(kepek/TUSKE_items.png);
@@ -111,6 +123,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
+    margin-bottom: 30px;
+    margin-top: 90px;
 }
 #tovabb{
     background-image: url(kepek/TUSKE_tovabb_withshadow.png);
@@ -119,6 +133,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
+    margin-bottom: 50px;
+    margin-top: 80px;
 }
 #arrow{
     background-image: url(kepek/TUSKE_arrow.png);
@@ -127,14 +143,18 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
+    margin-bottom: 50px;
+    margin-top: 80px;
 }
 #itemarrow{
     background-image: url(kepek/TUSKE_itemarrow.png);
-    aspect-ratio: 16/9;
-    width: 190px;
+    aspect-ratio: 8/6;
+    width: 200px;
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
+    margin-bottom: 20px;
+    margin-top: 60px;
 }
 
 /*kreditek*/
