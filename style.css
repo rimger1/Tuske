@@ -308,7 +308,7 @@
     inset: 0;
     background: black;
     z-index: 9999;
-    animation: fadeOut 1.5s ease forwards;
+    animation: fadeOut 4s ease forwards;
   }
   
   @keyframes fadeOut {
