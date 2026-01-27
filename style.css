@@ -323,7 +323,7 @@
 
 
 
-/*cutscene*/
+/*indul a jatek*/
 #intro {
     position: fixed;
     inset: 0;
@@ -357,3 +357,21 @@
 
 /*cutscene_1*/
 
+#fade{
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+}
+#fade{
+    animation: fadeOut 3s forwards ease;
+}
+  
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

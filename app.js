@@ -1,4 +1,4 @@
-//cutsceene
+/*indul a jatek*/
 const intro = document.getElementById("intro");
 const logo = document.getElementById("tuske-feher");
 
@@ -13,6 +13,34 @@ setTimeout(() => {
 intro.addEventListener("animationend", () => {
   intro.remove();
 });
+
+
+// cutscene 1
+
+const karakter = document.getElementById("karakter");
+
+function animacio()
+{
+  karakter.style.left = x + "px";
+  requestAnimationFrame(animacio)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 document.querySelectorAll("input[type=button]").forEach(btn => {
