@@ -375,3 +375,80 @@
     from { opacity: 1; }
     to   { opacity: 0; }
 }
+
+
+#jatekcut{
+    background-image: url(kepek/szogszoba.png);
+    background-repeat: no-repeat;
+    height: 98vh;
+    bottom: 0;
+    background-size: cover;
+    background-position: 0px -200px;
+}
+#next{
+    all: unset;
+    background-image: url(kepek/TUSKE_tovabb.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    aspect-ratio: 16/9;
+    transition: 0.3s ease;
+}
+#next:hover{
+    transform: scale(1.1);
+}
+
+
+
+#balKarakter{
+    background-image: url(kepek/szog.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 1/1;
+    transform:scaleX(-1);
+    top: 120px;
+    height: 600px;
+    left: 10%;
+}
+#jobbKarakter{
+    background-image: url(kepek/tuske.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 147px;
+    height: 560px;
+    right: 10%;
+}
+#szovegMezo{   
+    background-image: url(kepek/hatter.png);
+    background-size: cover;
+    position: absolute;
+    text-align: center;
+    aspect-ratio: 16/9;
+    width: 90%;
+    height: 270px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#karakterNev{
+    font-family: "Indie Flower", cursive; 
+    text-align: left;
+    color: black;
+    margin-top: 0px;
+    margin-bottom:0px;
+    padding-left: 9%;
+    font-weight: 700;
+    font-size: 40px;
+}
+#karakterSzoveg{
+    font-family: "Indie Flower", cursive; 
+    text-align: left;
+    color: black;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 15%;
+    padding-right: 9%;
+    font-weight: 700;
+    font-size: 25px;
+}

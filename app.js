@@ -11,7 +11,7 @@ setTimeout(() => {
 }, 4000);
 
 intro.addEventListener("animationend", () => {
-  intro.remove();
+  intro.style.zIndex=0;
 });
 
 
