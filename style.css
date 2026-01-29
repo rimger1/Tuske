@@ -263,6 +263,52 @@
     background-size: cover;
     background-position: 0px -200px;
 }
+
+#itemmezo{
+    position: absolute;
+    background-image: url(kepek/itemhatter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0px;
+    left: 2%;
+    aspect-ratio: 1/1;
+    
+    width: 20%;
+    height: 130px;
+}
+#item1{
+    position: absolute;
+    background-image: url(kepek/kalapacs.png);
+    top: 42px;
+    left: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display :block;
+    aspect-ratio: 1/1;
+    width: 25%;
+}
+#item2{
+    position: absolute;
+    background-image: url(kepek/kulcs.png);
+    top: 42px;
+    left: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display :block;
+    aspect-ratio: 1/1;
+    width: 25%;
+}
+#item3{
+    position: absolute;
+    background-image: url(kepek/cetli.png);
+    top: 45px;
+    left: 58%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display :block;
+    aspect-ratio: 1/1;
+    width: 24%;
+}
 #balKarakter{
     background-image: url(kepek/szog.png);
     background-size: cover;
@@ -315,8 +361,7 @@
     font-weight: 700;
     font-size: 25px;
 }
-
-#tovabb{
+#tovabbgomb{
     position: absolute;
     height: 60px;
     width: fit-content;
@@ -325,6 +370,14 @@
     float: right;
     border-color: transparent;
     background-color: transparent;
+
+    background-image: url(kepek/TUSKE_tovabb_withshadow.png);
+    aspect-ratio: 16/9;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
 }
 #elsoValaszthato{
     position: absolute;
@@ -418,22 +471,18 @@
     align-items: center;
     z-index: 9999;
     opacity: 1;
-}
-#fade{
     animation: fadeOut 3s forwards ease;
 }
-  
 @keyframes fadeOut {
     from { opacity: 1; }
     to   { opacity: 0; }
 }
 #jatekcut{
     background-image: url(kepek/szogszoba.png);
+    background-position-y: 26%;
     background-repeat: no-repeat;
-    height: 98vh;
-    bottom: 0;
     background-size: cover;
-    background-position: 0px -200px;
+    overflow: hidden;
 }
 #next{
     all: unset;
@@ -442,7 +491,7 @@
     background-size: contain;
     width: 250px;
     aspect-ratio: 16/9;
-    transition: 0.3s ease;
+    transition: 0.6s ease;
 }
 #next:hover{
     transform: scale(1.1);
@@ -451,7 +500,6 @@
     background-image: url(kepek/hatter.png);
     background-size: cover;
     position: absolute;
-    top: 0px;
     text-align: center;
     aspect-ratio: 16/9;
     width: 90%;
@@ -459,7 +507,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-#karakterNev{
+/*#karakterNev{
     font-family: "Indie Flower", cursive; 
     text-align: left;
     color: black;
@@ -479,14 +527,14 @@
     padding-right: 9%;
     font-weight: 700;
     font-size: 25px;
-}
+}*/
 #karakter{
     background-image: url(kepek/szog.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 340px;
+    top: 280px;
     height: 950px;
-    right: 10%; 
-    transform: rotate(-70deg) scaleX(-1);
+    right: 8%; 
+    transform: rotate(-77deg) scaleX(-1);
 }
