@@ -316,8 +316,60 @@
     font-size: 25px;
 }
 
+#tovabb{
+    position: absolute;
+    height: 60px;
+    width: fit-content;
+    right: 30px;
+    bottom: 10px;
+    float: right;
+    border-color: transparent;
+    background-color: transparent;
+}
+#elsoValaszthato{
+    position: absolute;
+    left: 15%;
+    top: 50px;
+    font-family: "Indie Flower", cursive; 
+    font-weight: 700;
+    font-size: 25px;
+    border-color: transparent;
+    background-color: transparent;
+}
+#masodikValaszthato{
+    position: absolute;
+    left: 15%;
+    top: 100px;
+    font-family: "Indie Flower", cursive; 
+    font-weight: 700;
+    font-size: 25px;
+    border-color: transparent;
+    background-color: transparent;
 
+}
+#harmadikValaszthato{
+    position: absolute;
+    left: 15%;
+    top: 150px;
+    font-family: "Indie Flower", cursive; 
+    font-weight: 700;
+    font-size: 25px;
+    border-color: transparent;
+    background-color: transparent;
+}
+#valaszto{
+    position: absolute;
+    
+    background-image: url(kepek/TUSKE_arrow.png);
+    aspect-ratio: 1/1;
+    background-size: contain;
+    width: 38px;
+    background-repeat: no-repeat;
 
+    right: 50%;
+    top: 60px;
+
+}
 
 
 
