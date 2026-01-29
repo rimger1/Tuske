@@ -418,22 +418,18 @@
     align-items: center;
     z-index: 9999;
     opacity: 1;
-}
-#fade{
     animation: fadeOut 3s forwards ease;
 }
-  
 @keyframes fadeOut {
     from { opacity: 1; }
     to   { opacity: 0; }
 }
 #jatekcut{
     background-image: url(kepek/szogszoba.png);
+    background-position-y: 26%;
     background-repeat: no-repeat;
-    height: 98vh;
-    bottom: 0;
     background-size: cover;
-    background-position: 0px -200px;
+    overflow: hidden;
 }
 #next{
     all: unset;
@@ -442,7 +438,7 @@
     background-size: contain;
     width: 250px;
     aspect-ratio: 16/9;
-    transition: 0.3s ease;
+    transition: 0.6s ease;
 }
 #next:hover{
     transform: scale(1.1);
@@ -451,7 +447,6 @@
     background-image: url(kepek/hatter.png);
     background-size: cover;
     position: absolute;
-    top: 0px;
     text-align: center;
     aspect-ratio: 16/9;
     width: 90%;
@@ -459,7 +454,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-#karakterNev{
+/*#karakterNev{
     font-family: "Indie Flower", cursive; 
     text-align: left;
     color: black;
@@ -479,14 +474,14 @@
     padding-right: 9%;
     font-weight: 700;
     font-size: 25px;
-}
+}*/
 #karakter{
     background-image: url(kepek/szog.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 340px;
+    top: 280px;
     height: 950px;
-    right: 10%; 
-    transform: rotate(-70deg) scaleX(-1);
+    right: 8%; 
+    transform: rotate(-77deg) scaleX(-1);
 }
