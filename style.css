@@ -427,8 +427,6 @@
     from { opacity: 1; }
     to   { opacity: 0; }
 }
-
-
 #jatekcut{
     background-image: url(kepek/szogszoba.png);
     background-repeat: no-repeat;
@@ -449,37 +447,15 @@
 #next:hover{
     transform: scale(1.1);
 }
-
-
-
-#balKarakter{
-    background-image: url(kepek/szog.png);
-    background-size: cover;
-    position: absolute;
-    aspect-ratio: 1/1;
-    transform:scaleX(-1);
-    top: 120px;
-    height: 600px;
-    left: 10%;
-}
-#jobbKarakter{
-    background-image: url(kepek/tuske.png);
-    background-size: cover;
-    position: absolute;
-    aspect-ratio: 1/1;
-    top: 147px;
-    height: 560px;
-    right: 10%;
-}
-#szovegMezo{   
+#szovegMezo_cutscene{   
     background-image: url(kepek/hatter.png);
     background-size: cover;
     position: absolute;
+    top: 0px;
     text-align: center;
     aspect-ratio: 16/9;
     width: 90%;
     height: 270px;
-    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -503,4 +479,14 @@
     padding-right: 9%;
     font-weight: 700;
     font-size: 25px;
+}
+#karakter{
+    background-image: url(kepek/szog.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 340px;
+    height: 950px;
+    right: 10%; 
+    transform: rotate(-70deg) scaleX(-1);
 }
