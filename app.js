@@ -1,19 +1,4 @@
-/*indul a jatek*/
-const intro = document.getElementById("intro");
-const logo = document.getElementById("tuske-feher");
-
-setTimeout(() => {
-  logo.style.opacity = 1;
-}, 1000);
-
-setTimeout(() => {
-  intro.classList.add("fade-out");
-}, 4000);
-
-intro.addEventListener("animationend", () => {
-  intro.style.zIndex=0;
-});
-
+/*
 
 // cutscene 1
 
@@ -24,7 +9,7 @@ function animacio()
   karakter.style.left = x + "px";
   requestAnimationFrame(animacio)
 }
-
+*/
 // szovegiras
 
 // window.open("page.html");
