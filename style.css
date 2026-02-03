@@ -269,10 +269,9 @@
     background-image: url(kepek/itemhatter.png);
     background-size: cover;
     background-repeat: no-repeat;
-    top: 0px;
-    left: 2%;
-    aspect-ratio: 1/1;
-    
+    top: -20px;
+    left: -1%;
+    aspect-ratio: 1/1;    
     width: 20%;
     height: 130px;
 }
@@ -370,14 +369,10 @@
     float: right;
     border-color: transparent;
     background-color: transparent;
-
     background-image: url(kepek/TUSKE_tovabb_withshadow.png);
     aspect-ratio: 16/9;
-    
     background-size: contain;
-    background-repeat: no-repeat;
-    
-    
+    background-repeat: no-repeat; 
 }
 #elsoValaszthato{
     position: absolute;
@@ -398,7 +393,6 @@
     font-size: 25px;
     border-color: transparent;
     background-color: transparent;
-
 }
 #harmadikValaszthato{
     position: absolute;
@@ -412,22 +406,24 @@
 }
 #valaszto{
     position: absolute;
-    
     background-image: url(kepek/TUSKE_arrow.png);
     aspect-ratio: 1/1;
     background-size: contain;
     width: 38px;
     background-repeat: no-repeat;
-
     right: 50%;
     top: 60px;
-
 }
-
-
-
-
-
+#hasznaltitem{
+    position: absolute;
+    background-image: url(kepek/kalapacs.png);
+    aspect-ratio: 1/1;
+    background-size: contain;
+    width: 90px;
+    background-repeat: no-repeat;
+    right: 42%;
+    top: 28px;
+}
 /*indul a jatek*/
 #intro {
     position: fixed;
