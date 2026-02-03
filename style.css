@@ -492,6 +492,14 @@
     width: 250px;
     aspect-ratio: 16/9;
     transition: 0.6s ease;
+    position: absolute;
+    height: 60px;
+    width: fit-content;
+    right: 30px;
+    top: 200px;
+    float: right;
+    border-color: transparent;
+    background-color: transparent;
 }
 #next:hover{
     transform: scale(1.1);
@@ -533,8 +541,8 @@
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 280px;
+    top: 190px;
     height: 950px;
-    right: 8%; 
+    right: 7%; 
     transform: rotate(-77deg) scaleX(-1);
 }
