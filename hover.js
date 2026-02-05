@@ -8,6 +8,7 @@ element.style.position = "absolute";
 element.style.top = "29px";
 
 //element.visible = false;
+//element.backgroundImage = "url('')";
 }
 function masodikv() {
     const element1 = document.getElementById("valaszto");
@@ -19,6 +20,7 @@ element.style.position = "absolute";
 element.style.top = "80px"; 
 
 //element.visible = false;
+//element.backgroundImage = "url('')";
 }
 function harmadikv() {
     const element1 = document.getElementById("valaszto");
@@ -30,6 +32,7 @@ element.style.position = "absolute";
 element.style.top = "130px";
 
 //element.visible = false;
+//element.backgroundImage = "url('')";
 
 }
 
