@@ -301,13 +301,13 @@
 #item3{
     position: absolute;
     background-image: url(kepek/cetli.png);
-    top: 52px;
-    left: 60%;
+    top: 45px;
+    left: 58%;
     background-size: cover;
     background-repeat: no-repeat;
     display :block;
     aspect-ratio: 1/1;
-    width: 20%;
+    width: 24%;
 }
 #balKarakter{
     background-image: url(kepek/szog.png);
@@ -478,10 +478,10 @@
     to   { opacity: 0; }
 }
 #jatekcut{
-    background-image: url(kepek/szogszoba.png);
-    background-position-y: 26%;
+    background-image: url(kepek/szogagy_pixel.png);  
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: 14%;
     overflow: hidden;
 }
 #next{
