@@ -8,6 +8,7 @@ function elsov() {
     element.style.position = "absolute"; 
     element.style.transition = "top 0.2s ease"; 
     element.style.top = "29px";
+    //rimo city
     //element.visible = false;
     //element.backgroundImage = "url('')";
 }
@@ -21,6 +22,7 @@ function masodikv() {
     element.style.position = "absolute";
     element.style.transition = "top 0.2s ease"; 
     element.style.top = "80px"; 
+    //rimo city
     //element.visible = false;
     //element.backgroundImage = "url('')";
 }
@@ -34,6 +36,7 @@ function harmadikv() {
     element.style.position = "absolute";
     element.style.transition = "top 0.2s ease"; 
     element.style.top = "130px";
+    //rimo city
     //element.visible = false;
     //element.backgroundImage = "url('')";
 }
