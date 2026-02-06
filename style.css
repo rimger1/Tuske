@@ -475,7 +475,7 @@
     to   { opacity: 0; }
 }
 #jatekcut{
-    background-image: url(kepek/szogagy_pixel.png);  
+    background-image: url(kepek/szogszoba_fentrol_pixel.png);  
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 14%;
@@ -493,7 +493,7 @@
     height: 60px;
     width: fit-content;
     right: 30px;
-    top: 200px;
+    top: 140px;
     float: right;
     border-color: transparent;
     background-color: transparent;
@@ -508,11 +508,11 @@
     text-align: center;
     aspect-ratio: 16/9;
     width: 90%;
-    height: 270px;
+    height: 200px;
     left: 50%;
     transform: translateX(-50%);
 }
-/*#karakterNev{
+#karakterNev{
     font-family: "Indie Flower", cursive; 
     text-align: left;
     color: black;
@@ -532,7 +532,7 @@
     padding-right: 9%;
     font-weight: 700;
     font-size: 25px;
-}*/
+}
 #karakter{
     background-image: url(kepek/szog.png);
     background-size: cover;
