@@ -478,7 +478,6 @@
     background-image: url(kepek/szogszoba_fentrol_pixel.png);  
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 14%;
     overflow: hidden;
 }
 #next{
@@ -538,8 +537,8 @@
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 190px;
-    height: 950px;
-    right: 7%; 
+    top: 70px;
+    height: 800px;
+    right: 30%; 
     transform: rotate(-77deg) scaleX(-1);
 }
