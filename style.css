@@ -300,13 +300,14 @@
 #item3{
     position: absolute;
     background-image: url(kepek/cetli.png);
-    top: 45px;
-    left: 58%;
+    top: 52px;
+    left: 60%;
     background-size: cover;
     background-repeat: no-repeat;
     display :block;
     aspect-ratio: 1/1;
-    width: 24%;
+    width: 20%;
+    
 }
 #balKarakter{
     background-image: url(kepek/szog.png);
