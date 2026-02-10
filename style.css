@@ -256,12 +256,12 @@
 
 /* play*/
 #jatektest{
-    background-image: url(kepek/time\ machinehome.png);
+    background-image: url(kepek/idogephaz_reggel_pixel.png);
     background-repeat: no-repeat;
     height: 98vh;
     bottom: 0;
     background-size: cover;
-    background-position: 0px -200px;
+    background-position: 0px -400px;
 }
 
 #itemmezo{
@@ -315,18 +315,18 @@
     position: absolute;
     aspect-ratio: 1/1;
     transform:scaleX(-1);
-    top: 120px;
-    height: 600px;
-    left: 10%;
+    top: 180px;
+    height: 550px;
+    left: 5%;
 }
 #jobbKarakter{
     background-image: url(kepek/tuske.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    top: 147px;
-    height: 560px;
-    right: 10%;
+    top: 198px;
+    height: 510px;
+    right: 5%;
 }
 #szovegMezo{   
     background-image: url(kepek/hatter.png);
