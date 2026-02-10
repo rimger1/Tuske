@@ -459,7 +459,7 @@
 
 /*cutscene_1*/
 
-#fade{
+/*#fade{
     position: fixed;
     inset: 0;
     background: black;
@@ -473,7 +473,7 @@
 @keyframes fadeOut {
     from { opacity: 1; }
     to   { opacity: 0; }
-}
+}*/
 #jatekcut{
     background-image: url(kepek/szogszoba_fentrol_pixel.png);  
     background-repeat: no-repeat;
@@ -521,7 +521,7 @@
     font-weight: 700;
     font-size: 40px;
 }
-#karakterSzoveg{
+#KarakterSzoveg{
     font-family: "Indie Flower", cursive; 
     text-align: left;
     color: black;
