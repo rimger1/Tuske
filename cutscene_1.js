@@ -3,7 +3,6 @@ let tortSzoveg = [];
 let currantIndex = 0;
 const szovegTx = document.getElementById("KarakterSzoveg");
 const tovBtn = document.getElementById("next");
-
 let clickCounter = 0;
 
 /*fade levetele*/
