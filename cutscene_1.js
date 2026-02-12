@@ -3,6 +3,8 @@ let tortSzoveg = [];
 let currantIndex = 0;
 const szovegTx = document.getElementById("KarakterSzoveg");
 const tovBtn = document.getElementById("next");
+const szog = document.getElementById("karakter");
+const hatter = document.getElementById("jatekcut");
 
 let clickCounter = 0;
 
@@ -21,7 +23,6 @@ function sleep(ms)
 
 async function Kiir(){
   clickCounter++;
-  console.log(clickCounter);
   tovBtn.disabled= true;
   tortSzoveg = szoveg.split('+');
 
@@ -43,11 +44,14 @@ async function Kiir(){
 }
 
 
-function Mozgas(){}    
-  if (clickCounter == 4){
-    const szog = document.getElementById("karakter");
-    szog.style.position = "absolute";
-    szog.style.transform = "rotate(0deg)";
+function Mozgas(){
+  switch(clickCounter){
+    case 4:
+        szog.style.position = "absolute";
+        szog.style.transform = "rotate(0deg)";
+        hatter.style.backgroundImage = 
+        break;
+  }
 }
 
 

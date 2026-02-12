@@ -475,7 +475,7 @@
     to   { opacity: 0; }
 }*/
 #jatekcut{
-    background-image: url(kepek/szogszoba_fentrol_pixel.png);  
+    background-image: url(kepek/buli);  
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -541,4 +541,5 @@
     height: 800px;
     right: 30%; 
     transform: rotate(-77deg) scaleX(-1);
+    transition: 0.3s ease;
 }
