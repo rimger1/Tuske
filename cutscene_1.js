@@ -15,7 +15,14 @@ function fadeOff(){
   document.getElementById("fade").style.display = "none";
 }
 
+//fade on
 
+function fadeOn(){
+  document.getElementById("fade").style.display = "flex";
+}
+
+
+//kiiras
 function sleep(ms) 
 { 
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -49,8 +56,11 @@ function Mozgas(){
     case 4:
         szog.style.position = "absolute";
         szog.style.transform = "rotate(0deg)";
-        hatter.style.backgroundImage = 
         break;
+    case 5:
+      fadeOn()
+      hatter.style.backgroundImage = "url(kepek/buli_pixel.png)";
+      setTimeout(fadeOn, 2500);
   }
 }
 
