@@ -5,6 +5,7 @@ const szovegTx = document.getElementById("KarakterSzoveg");
 const tovBtn = document.getElementById("next");
 const szog = document.getElementById("karakter");
 const hatter = document.getElementById("jatekcut");
+const fade =document.getElementById("fade");
 
 let clickCounter = 0;
 
@@ -12,13 +13,13 @@ let clickCounter = 0;
 setTimeout(fadeOff, 2500);
 
 function fadeOff(){
-  document.getElementById("fade").style.display = "none";
+  fade.style.display = "none";
 }
 
 //fade on
 
 function fadeOn(){
-  document.getElementById("fade").style.display = "flex";
+  fade.style.display = "flex";
 }
 
 
@@ -37,7 +38,7 @@ async function Kiir(){
   for (let i=0; i < tortSzoveg[currantIndex].length; i++)
   {
     szovegTx.innerHTML += tortSzoveg[currantIndex][i];
-    await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
+    /*await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));*/
 
   }
 
@@ -50,17 +51,44 @@ async function Kiir(){
   Mozgas();
 }
 
+function HatterChange(){
+  hatter.style.backgroundImage = "url(kepek/buli_pixel.png)"
+}
 
-function Mozgas(){
+async function Tanc(){
+  if(clickCounter==5)
+  {
+    for(let i=0;i<1000;i++)
+      if(i%2==0)
+      {
+        szog.style.transform= "top 0.2s ease"
+        szog.style.top= "230px"
+        await sleep(100);
+      }
+      else
+      {
+        szog.style.transform= "top 0.2s ease"
+        szog.style.top= "30px"
+        await sleep(100);    
+      }
+  }
+}
+
+async function Mozgas(){
   switch(clickCounter){
     case 4:
         szog.style.position = "absolute";
         szog.style.transform = "rotate(0deg)";
         break;
     case 5:
-      fadeOn()
-      hatter.style.backgroundImage = "url(kepek/buli_pixel.png)";
-      setTimeout(fadeOn, 2500);
+      fadeOn();
+      fade.classList.add("in");
+      await sleep(2900)
+      HatterChange();
+      fade.classList.add("out");
+      await sleep(2500)
+      fadeOff();
+      Tanc();
   }
 }
 
