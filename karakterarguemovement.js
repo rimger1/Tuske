@@ -13,7 +13,7 @@ function elsoani(){
     element2.style.height = "510px";
     element2.style.top = "198px";
 }
-function masodikani(){
+function tgombnyom(){
     const element1 = document.getElementById("balKarakter");
     element1.style.position = "absolute"; 
     element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
