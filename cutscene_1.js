@@ -1,6 +1,7 @@
 let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... (buli jelenet) +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ?? +HALLÓ! +Ez tényleg meglépett a telója nélkül... +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni! +ITT VAGY?? HELLÓ? +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével... +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság."
 let tortSzoveg = [];
 let currantIndex = 0;
+let tancIndex=0;
 const szovegTx = document.getElementById("KarakterSzoveg");
 const tovBtn = document.getElementById("next");
 const szog = document.getElementById("karakter");
@@ -31,6 +32,7 @@ function sleep(ms)
 
 async function Kiir(){
   clickCounter++;
+  console.log(clickCounter);
   tovBtn.disabled= true;
   tortSzoveg = szoveg.split('+');
 
@@ -38,7 +40,7 @@ async function Kiir(){
   for (let i=0; i < tortSzoveg[currantIndex].length; i++)
   {
     szovegTx.innerHTML += tortSzoveg[currantIndex][i];
-    /*await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));*/
+    //await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
 
   }
 
@@ -51,26 +53,33 @@ async function Kiir(){
   Mozgas();
 }
 
-function HatterChange(){
-  hatter.style.backgroundImage = "url(kepek/buli_pixel.png)"
+function HatterChange(hatter){
+  hatter.style.backgroundImage = `url("${hatter}")`;
 }
 
 async function Tanc(){
   if(clickCounter==5)
   {
-    for(let i=0;i<1000;i++)
-      if(i%2==0)
+    for(;tancIndex<10000;tancIndex++){
+      
+      if(clickCounter!=5)
       {
-        szog.style.transform= "top 0.2s ease"
+        break;
+      }
+
+      if(tancIndex%2==0)
+      {
+        szog.style.transition= "top 0.5s ease"
         szog.style.top= "230px"
-        await sleep(100);
+        await sleep(150);
       }
       else
       {
-        szog.style.transform= "top 0.2s ease"
-        szog.style.top= "30px"
-        await sleep(100);    
+        szog.style.transition= "top 0.5s ease"
+        szog.style.top= "0px"
+        await sleep(150);    
       }
+    }
   }
 }
 
@@ -84,12 +93,18 @@ async function Mozgas(){
       fadeOn();
       fade.classList.add("in");
       await sleep(2900)
-      HatterChange();
+      HatterChange("url(kepek/buli_pixel.png");
       fade.classList.add("out");
-      await sleep(2500)
-      fadeOff();
       Tanc();
-  }
+      await sleep(2000)
+      fadeOff();
+
+      //buli vege
+
+      await sleep(4000);
+
+      case 6:
+  } 
 }
 
 
