@@ -12,6 +12,7 @@ function elsoani(){
     element2.style.right = "5%";
     element2.style.height = "510px";
     element2.style.top = "198px";
+    
 }
 function tgombnyom(){
     const element1 = document.getElementById("balKarakter");
@@ -28,5 +29,5 @@ function tgombnyom(){
     element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease"; 
     element2.style.right = "10%";
     element2.style.height = "630px";
-    element2.style.top = "130px";
+    element2.style.top = "130px"; 
 }
