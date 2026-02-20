@@ -118,14 +118,14 @@ async function Mozgas(){
       tovBtn.style.display="block"
       await sleep(2000)
       fadeOff();
-
-      case 6:
-        szog.style.transform = "translateX(-50%)";
-        await sleep(50)
-        szog.style.transform = "translateX(50%)";
+      break;
+    case 6:
+      szog.style.transition= "0.6s ease"
+      szog.style.transform = "scaleX(-1)";
+      await sleep(800)
+      szog.style.transform = "scaleX(1)";
   } 
 }
-
 
 
 
