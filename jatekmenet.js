@@ -13,7 +13,8 @@ const valaszto=document.getElementById("valaszto");
 const item=document.getElementById("hasznaltitem");
 
 const hatter=document.getElementById("jatektest");
-hatter.style.backgroundImage = `url("kepek/tuskekilakoltatas.png")`;
+let dialogvege=false;
+
 
 
 function balkarakterbeszel(){
@@ -60,29 +61,38 @@ function sleep(ms)
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function Kiir(){
+async function Kiir(megadottszoveg){
   tovabbgomb.disabled= true;
   tortSzoveg = szoveg.split('+');
 
-  cutszoveg.innerHTML ="";
+  megadottszoveg.innerHTML ="";
   for (let i=0; i < tortSzoveg[currantIndex].length; i++)
   {
     console.log (tortSzoveg[currantIndex][i]);
-    cutszoveg.innerHTML += tortSzoveg[currantIndex][i];
+    megadottszoveg.innerHTML += tortSzoveg[currantIndex][i];
     await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
   }
   if (currantIndex < tortSzoveg.length-1)
   {
     currantIndex++;
     tovabbgomb.disabled= false;
+    dialogvege=false;
   }
+  else if (currantIndex == tortSzoveg.length-1)
+    {
+      currantIndex= 0;
+      tovabbgomb.disabled= true;
+      dialogvege=true;
+      console.log("dialogvege: "+dialogvege);
+      
+    }
   
 }
 function tovabbg(){
   
-  Kiir();
+  Kiir(cutszoveg);
   storytelling();
-  jobbkarkterbeszel();
+  
 
 }
 
@@ -91,7 +101,7 @@ function tovabbg(){
 
 
 
-valasztas();
+
 
 
 
@@ -121,6 +131,8 @@ function valasztas()
         item.style.visibility="visible";
         valaszto.style.visibility = "visible";
         tovabbgomb.style.visibility = "hidden";
+        balkarakterbeszel();
+       
         
     }
         
@@ -130,7 +142,7 @@ function elsova() {
     
     
     storytelling();
-    Kiir();
+    Kiir(cutszoveg);
     jobbkarkterbeszel();
     
 
@@ -139,7 +151,7 @@ function masodikva() {
     
     
     storytelling();
-    Kiir();
+    Kiir(cutszoveg);
     jobbkarkterbeszel();
     
     
@@ -148,8 +160,31 @@ function harmadikva() {
    
    
     storytelling();
-    Kiir();
+    Kiir(cutszoveg);
     jobbkarkterbeszel();
     
     
 }
+
+function kilakoltatas(dv){
+  console.log("kilakoltatas");
+  szoveg = "halo+helo";
+  hatter.style.backgroundImage = `url("kepek/tuskekilakoltatas.png")`;
+  storytelling();
+  balkarakterbeszel();
+  element2.style.position = "absolute";
+  element2.style.visibility = "hidden";
+  element2.style.right = "-5%";
+  console.log("kilakoltatas: " + dv);
+
+  
+  if (dv === true) {
+    console.log("kilakoltatas true");
+    element2.style.visibility = "visible";
+    element2.style.right = "10%";
+    element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+    jobbkarkterbeszel();
+  }
+}
+
+kilakoltatas(dialogvege);
