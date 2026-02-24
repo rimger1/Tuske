@@ -6,6 +6,7 @@ let tancVege=false
 const szovegTx = document.getElementById("KarakterSzoveg");
 const tovBtn = document.getElementById("next");
 const szog = document.getElementById("karakter");
+const tuske = document.getElementById("karakter2");
 const hatter = document.getElementById("jatekcut");
 const fade =document.getElementById("fade");
 
@@ -91,6 +92,9 @@ async function Mozgas(){
     case 4:
       szog.style.position = "absolute";
       szog.style.transform = "rotate(0deg)";
+      szog.style.transition= "top 0.5s ease"
+      szog.style.top= "230px"
+      HatterChange("kepek/szogszoba_reggel_pixel.png")
       break;
     case 5:
       fadeOn();
@@ -111,7 +115,7 @@ async function Mozgas(){
       fadeOn();
       fade.classList.add("in");
       await sleep(2900)
-      HatterChange("kepek/szogszoba_fentrol_pixel.png");
+      HatterChange("kepek/szogszoba_reggel_pixel.png");
       fade.classList.add("out");
       tancVege=true;
       szog.style.top= "230px"

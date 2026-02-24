@@ -490,6 +490,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    transition: 1s ease;
 }
 #next{
     all: unset;
@@ -544,7 +545,7 @@
     font-size: 25px;
 }
 #karakter{
-    background-image: url(kepek/szog.png);
+    background-image: url(kepek/szog_alszik.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
@@ -553,4 +554,14 @@
     right: 30%; 
     transform: rotate(-77deg) scaleX(-1);
     transition: 0.3s ease;
+}
+#karakter2{
+    background-image: url(kepek/tuske.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 70px;
+    height: 800px;
+    right: 30%;
+    display: none;
 }
