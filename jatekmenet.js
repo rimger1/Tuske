@@ -14,7 +14,9 @@ const item=document.getElementById("hasznaltitem");
 
 const hatter=document.getElementById("jatektest");
 let dialogvege=false;
-let dialogindex=0;
+item.style.visibility = "hidden";
+let hovakattint=0;
+
 
 
 
@@ -54,6 +56,7 @@ let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az i
 let tortSzoveg = [];
 let currantIndex = 0;
 let tovabbGombPressed = false;
+let dialogvegeCount = 0;
 
 function sleep(ms) 
 { 
@@ -66,7 +69,7 @@ async function Kiir(megadottszoveg){
 
   megadottszoveg.innerHTML = "";
   for (let i = 0; i < tortSzoveg[currantIndex].length; i++) {
-    console.log(tortSzoveg[currantIndex][i]);
+    
     megadottszoveg.innerHTML += tortSzoveg[currantIndex][i];
     await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
   }
@@ -78,7 +81,7 @@ async function Kiir(megadottszoveg){
     currantIndex = 0;
     tovabbgomb.disabled = false;
     dialogvege = true;
-    dialogindex ++ ;
+    dialogvegeCount++;
     console.log("dialogvege: " + dialogvege);
   }
 }
@@ -86,7 +89,7 @@ async function Kiir(megadottszoveg){
 function tovabbg() {
   if (dialogvege && !tovabbGombPressed) {
     tovabbGombPressed = true; 
-    console.log("Tovabb gomb pressed after dialog end. Waiting for another press.");
+    
   } else {
     tovabbGombPressed = false; 
     Kiir(cutszoveg);
@@ -119,18 +122,21 @@ function elsova() {
   storytelling();
   Kiir(cutszoveg);
   jobbkarkterbeszel();
+  console.log("Első választási lehetőség kiválasztva.");
 }
 
 function masodikva() {
   storytelling();
   Kiir(cutszoveg);
   jobbkarkterbeszel();
+  console.log("Második választási lehetőség kiválasztva.");
 }
 
 function harmadikva() {
   storytelling();
   Kiir(cutszoveg);
   jobbkarkterbeszel();
+  console.log("Harmadik választási lehetőség kiválasztva.");
 }
 
 function kilakoltatas(dv) {
@@ -150,7 +156,6 @@ function kilakoltatas(dv) {
     const checkDialogvege = () => {
       if (dialogvege === true) {
         resolve();
-        
       } else {
         setTimeout(checkDialogvege, 100);
       }
@@ -161,27 +166,42 @@ function kilakoltatas(dv) {
   waitForDialogvege.then(() => {
     console.log("kilakoltatas true");
     tovabbgomb.disabled = false; 
-    tovabbgomb.addEventListener("click", () => {
-      element2.style.visibility = "visible";
-      element2.style.right = "10%";
-      element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
-      jobbkarkterbeszel();
-      dialogvege = false;
-      karakternev.innerHTML = "Tulaj";
-      cutszoveg.innerHTML = "";
-      karakternev.style.color = "darkgreen";
-      cutszoveg.style.color = "darkgreen";
-      szoveg="Jó napot! +Te lennél annak a hegyeshajú fószer barátja? +Láttalak titeket töbször együtt tengeni. +Ha őt keresed, akkor rossz hírem van. +Nem fizette a lakbért már egy jó ideje, úgyhogy ki kellett lakoltatni. +Nem tudom merre van, azóta. ";
-    }, { once: true }); 
+    console.log(dialogvegeCount);
 
+    const tovabbGombHandler = () => {
+      if (dialogvege) {
+        console.log(dialogvegeCount);
+        if (dialogvegeCount === 2) {
+          valasztas();
+          karakternev.innerHTML = "Szög";
+          karakternev.style.color = "black";
+          elsoValaszthato.value = "Mióta nem fizeti a lakbért?";
+          masodikValaszthato.value = "Mikor lett kilakoltatva?";
+          harmadikValaszthato.value = "Hagyott itt valamit?";
 
+          elsoValaszthato.addEventListener("click", elsovalasztas);
+          masodikValaszthato.addEventListener("click", masodikvalasztas);
+          harmadikValaszthato.addEventListener("click", harmadikvalasztas);
+
+        } else {
+          element2.style.visibility = "visible";
+          element2.style.right = "10%";
+          element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+          jobbkarkterbeszel();
+          dialogvege = false;
+          karakternev.innerHTML = "Tulaj";
+          cutszoveg.innerHTML = "";
+          karakternev.style.color = "darkgreen";
+          cutszoveg.style.color = "darkgreen";
+          szoveg = "...";
+        }
+      } else {
+        console.log("megy a dialog");
+      }
+    };
+
+    tovabbgomb.addEventListener("click", tovabbGombHandler);
   });
-  
-   
-    
-
-
-  
 }
 
 kilakoltatas(dialogvege);
