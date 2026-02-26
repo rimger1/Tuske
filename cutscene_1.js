@@ -9,6 +9,7 @@ const szog = document.getElementById("karakter");
 const tuske = document.getElementById("karakter2");
 const hatter = document.getElementById("jatekcut");
 const fade =document.getElementById("fade");
+const nev =document.getElementById("karakterNev");
 
 let clickCounter = 0;
 
@@ -96,7 +97,7 @@ async function Mozgas(){
   switch(clickCounter){
     case 4:
       szogVisszaallitas();
-      HatterChange(szog,"kepek/szog.png");
+      HatterChange(szog,"kepek/szog_ul.png");
       szog.style.position = "absolute";
       szog.style.transform = "rotate(0deg)";
       szog.style.transition= "top 0.5s ease";
@@ -123,6 +124,7 @@ async function Mozgas(){
       fade.classList.add("in");
       await sleep(2900)
       HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png");
+      HatterChange(szog,"kepek/szog_all.png");
       fade.classList.add("out");
       tancVege=true;
       szog.style.top= "230px"
@@ -135,6 +137,18 @@ async function Mozgas(){
       szog.style.transform = "scaleX(-1)";
       await sleep(800)
       szog.style.transform = "scaleX(1)";
+      break;
+    case 9:
+      szovegTx.style.marginTop="70px"
+      nev.style.display="none"
+      HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
+      szog.style.display="none"
+      break;
+    case 10:
+      szovegTx.style.marginTop="0px"
+      nev.style.display="block"
+      HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png")
+      szog.style.display="block"
   } 
 }
 
