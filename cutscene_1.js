@@ -55,10 +55,15 @@ async function Kiir(){
   Mozgas();
 }
 
-function HatterChange(kep){
-  hatter.style.backgroundImage = `url("${kep}")`;
+function HatterChange(valto,kep){
+  valto.style.backgroundImage = `url("${kep}")`;
 }
 
+function szogVisszaallitas(){
+  szog.style.aspectRatio="1/1"
+  szog.style.top="70px"
+  szog.style.height="800px"
+}
 
 
 async function Tanc(){
@@ -90,17 +95,19 @@ async function Tanc(){
 async function Mozgas(){
   switch(clickCounter){
     case 4:
+      szogVisszaallitas();
+      HatterChange(szog,"kepek/szog.png");
       szog.style.position = "absolute";
       szog.style.transform = "rotate(0deg)";
-      szog.style.transition= "top 0.5s ease"
-      szog.style.top= "230px"
-      HatterChange("kepek/szogszoba_reggel_pixel.png")
+      szog.style.transition= "top 0.5s ease";
+      szog.style.top= "230px";
+      HatterChange(hatter, "kepek/szogszoba_reggel_pixel.png");
       break;
     case 5:
       fadeOn();
       fade.classList.add("in");
       await sleep(2900)
-      HatterChange("kepek/buli_pixel.png");
+      HatterChange(hatter,"kepek/buli_pixel.png");
       fade.classList.add("out");
       tovBtn.style.display="none";
       Tanc();
@@ -115,7 +122,7 @@ async function Mozgas(){
       fadeOn();
       fade.classList.add("in");
       await sleep(2900)
-      HatterChange("kepek/szogszoba_reggel_pixel.png");
+      HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png");
       fade.classList.add("out");
       tancVege=true;
       szog.style.top= "230px"

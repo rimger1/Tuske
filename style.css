@@ -262,6 +262,7 @@
     bottom: 0;
     background-size: cover;
     background-position: 0px -400px;
+    overflow: hidden;
 }
 
 #itemmezo{
