@@ -14,6 +14,7 @@ const item=document.getElementById("hasznaltitem");
 
 const hatter=document.getElementById("jatektest");
 let dialogvege=false;
+let dialogindex=0;
 
 
 
@@ -77,6 +78,7 @@ async function Kiir(megadottszoveg){
     currantIndex = 0;
     tovabbgomb.disabled = false;
     dialogvege = true;
+    dialogindex ++ ;
     console.log("dialogvege: " + dialogvege);
   }
 }
@@ -135,7 +137,7 @@ function kilakoltatas(dv) {
   console.log("kilakoltatas");
   karakternev.innerHTML = "Szög";
   cutszoveg.innerHTML = "";
-  szoveg = "halo+helo";
+  szoveg = "Remélem be tudok jutni valahogy... +Csak nem alszik még mindig ez a bolond.";
   hatter.style.backgroundImage = `url("kepek/tuskekilakoltatas.png")`;
   storytelling();
   balkarakterbeszel();
@@ -169,9 +171,17 @@ function kilakoltatas(dv) {
       cutszoveg.innerHTML = "";
       karakternev.style.color = "darkgreen";
       cutszoveg.style.color = "darkgreen";
-      szoveg="baba+bobo";
+      szoveg="Jó napot! +Te lennél annak a hegyeshajú fószer barátja? +Láttalak titeket töbször együtt tengeni. +Ha őt keresed, akkor rossz hírem van. +Nem fizette a lakbért már egy jó ideje, úgyhogy ki kellett lakoltatni. +Nem tudom merre van, azóta. ";
     }, { once: true }); 
+
+
   });
+  
+   
+    
+
+
+  
 }
 
 kilakoltatas(dialogvege);
