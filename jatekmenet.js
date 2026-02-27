@@ -140,6 +140,12 @@ function harmadikva() {
 }
 
 function kilakoltatas(dv) {
+
+  
+
+
+
+
   console.log("kilakoltatas");
   karakternev.innerHTML = "Szög";
   cutszoveg.innerHTML = "";
@@ -179,9 +185,38 @@ function kilakoltatas(dv) {
           masodikValaszthato.value = "Mikor lett kilakoltatva?";
           harmadikValaszthato.value = "Hagyott itt valamit?";
 
-          elsoValaszthato.addEventListener("click", elsovalasztas);
-          masodikValaszthato.addEventListener("click", masodikvalasztas);
-          harmadikValaszthato.addEventListener("click", harmadikvalasztas);
+          elsoValaszthato.addEventListener("click", lakber);
+          masodikValaszthato.addEventListener("click", kilakoltatasdatum);
+          harmadikValaszthato.addEventListener("click", hagyottittvalamit);
+
+          function lakber() {
+             
+            dialogvege = false;
+            szoveg = "+ Hát hapsim mióta? +Három mocskos hónapja. +Már úgy voltam bűnvadászokat hívok, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire...";
+            tovabbg();
+            storytelling();
+            karakternev.innerHTML = "Tulaj";
+                  cutszoveg.innerHTML = "";
+                  karakternev.style.color = "darkgreen";
+                  cutszoveg.style.color = "darkgreen";
+            
+            jobbkarkterbeszel();
+            
+            console.log("Első választási lehetőség kiválasztva.");
+          }
+          function kilakoltatasdatum() {
+             
+            dialogvege = false;
+            szoveg = "+ Hát hapsim tegnap délután. +Felszívódott, így lakatost kellett hívnom az ajtóhoz, hogy bejussak.+ Ezek a mai fiatalok nincsenek tekintettel semmire...";
+            tovabbg();
+            storytelling();
+            karakternev.innerHTML = "Tulaj";
+                  cutszoveg.innerHTML = "";
+                  karakternev.style.color = "darkgreen";
+                  cutszoveg.style.color = "darkgreen";
+          }
+
+         
 
         } else {
           element2.style.visibility = "visible";
@@ -194,6 +229,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
           szoveg = "...";
+          
         }
       } else {
         console.log("megy a dialog");
