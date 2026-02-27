@@ -261,7 +261,7 @@
     height: 98vh;
     bottom: 0;
     background-size: cover;
-    background-position: 0px -400px;
+    background-position: 0px -200px;
     overflow: hidden;
 }
 
@@ -563,7 +563,7 @@
     aspect-ratio: 1/1;
     top: 70px;
     height: 800px;
-    right: 30%;
+    right: 50%;
     display: none;
 }
 
