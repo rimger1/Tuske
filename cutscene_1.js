@@ -79,15 +79,21 @@ async function Tanc(){
 
       if(tancIndex%2==0)
       {
-        szog.style.transition= "top 0.5s ease"
+        szog.style.transition= "top 0.8s ease"
         szog.style.top= "230px"
-        await sleep(150);
+
+        tuske.style.transition= "top 0.4s ease"
+        tuske.style.top= "180px"
+        await sleep(200);
       }
       else
       {
-        szog.style.transition= "top 0.5s ease"
+        szog.style.transition= "top 0.8s ease"
         szog.style.top= "0px"
-        await sleep(150);    
+
+        tuske.style.transition= "top 0.4s ease"
+        tuske.style.top= "20px"
+        await sleep(200);    
       }
     }
   }
@@ -109,8 +115,10 @@ async function Mozgas(){
       fade.classList.add("in");
       await sleep(2900)
       HatterChange(hatter,"kepek/buli_pixel.png");
+      HatterChange(szog,"kepek/szog.png");
       fade.classList.add("out");
       tovBtn.style.display="none";
+      tuske.style.display="block"
       Tanc();
       await sleep(2000)
       fadeOff();
@@ -125,6 +133,7 @@ async function Mozgas(){
       await sleep(2900)
       HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png");
       HatterChange(szog,"kepek/szog_all.png");
+      tuske.style.display="none"
       fade.classList.add("out");
       tancVege=true;
       szog.style.top= "230px"

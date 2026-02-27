@@ -563,6 +563,72 @@
     aspect-ratio: 1/1;
     top: 70px;
     height: 800px;
-    right: 30%;
+    right: 50%;
     display: none;
 }
+
+
+/*TESZT*/
+#testing{
+    background-image: url(kepek/szogkonyha_pixel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* szog all a konyhaban
+#karakterasd{
+    background-image: url(kepek/szog_all.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 240/1420;
+    top: 220px;
+    height: 960px;
+    right: 60%; 
+    transform: scaleX(-1);
+}*/
+
+/*szog all a furdoben
+#karakterasd{
+    background-image: url(kepek/szog_all.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 240/1420;
+    top: 150px;
+    height: 1500px;
+    right: 77%; 
+    transform: scaleX(-1);
+}*/
+
+/*szog all a folyoson
+#karakterasd{
+    background-image: url(kepek/szog_all.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 240/1420;
+    top: 240px;
+    height: 900px;
+    right: 24%; 
+}*/
+
+/*szog all a szobaban
+#karakterasd{
+    background-image: url(kepek/szog_all.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 240/1420;
+    top: 260px;
+    height: 860px;
+    right: 50%; 
+}*/
+
+/*szog ul az agyban
+#karakterasd{
+    background-image: url(kepek/szog_ul.png);
+    background-size: cover;
+    position: absolute;
+    aspect-ratio: 410/1400;
+    top: 280px;
+    height: 700px;
+    right: 41%; 
+}*/
