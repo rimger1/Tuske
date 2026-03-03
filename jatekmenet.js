@@ -112,7 +112,7 @@ function valasztas() {
   masodikValaszthato.style.visibility = "visible";
   harmadikValaszthato.style.visibility = "visible";
   cutszoveg.style.visibility = "hidden";
-  item.style.visibility = "visible";
+  
   valaszto.style.visibility = "visible";
   tovabbgomb.style.visibility = "hidden";
   balkarakterbeszel();
@@ -192,7 +192,7 @@ function kilakoltatas(dv) {
           function lakber() {
              
             dialogvege = false;
-            szoveg = "+ Hát hapsim mióta? +Három mocskos hónapja. +Már úgy voltam bűnvadászokat hívok, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire...";
+            szoveg = "+ Hát hapsim mióta? +Három mocskos hónapja. +Már úgy voltam bűnvadászokat hívok, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +Nézd meg a postaládáját, talán találsz valamit.";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -207,7 +207,18 @@ function kilakoltatas(dv) {
           function kilakoltatasdatum() {
              
             dialogvege = false;
-            szoveg = "+ Hát hapsim tegnap délután. +Felszívódott, így lakatost kellett hívnom az ajtóhoz, hogy bejussak.+ Ezek a mai fiatalok nincsenek tekintettel semmire...";
+            szoveg = "+ Hát hapsim tegnap délután. +Felszívódott, így lakatost kellett hívnom az ajtóhoz, hogy bejussak.+ Ezek a mai fiatalok nincsenek tekintettel semmire... +Nézd meg a postaládáját, talán találsz valamit.";
+            tovabbg();
+            storytelling();
+            karakternev.innerHTML = "Tulaj";
+                  cutszoveg.innerHTML = "";
+                  karakternev.style.color = "darkgreen";
+                  cutszoveg.style.color = "darkgreen";
+          }
+          function hagyottittvalamit() {
+             
+            dialogvege = false;
+            szoveg = "+ Pár ruhát itt hagyott, azon kívül semmit. +Ezek a mai fiatalok nincsenek tekintettel semmire... +Talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -218,7 +229,20 @@ function kilakoltatas(dv) {
 
          
 
-        } else {
+        } 
+        else if(dialogvegeCount === 3) {
+          storytelling();
+          karakternev.innerHTML = "Szög";
+          karakternev.style.color = "black";
+          cutszoveg.innerHTML = "";
+          szoveg="+ Na jó, már kezd az idegeimre menni ez a csávó";
+          
+        }
+        
+        
+        
+        
+        else {
           element2.style.visibility = "visible";
           element2.style.right = "10%";
           element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
@@ -229,6 +253,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
           szoveg = "...";
+          //szoveg = "Jó napot! +Te vagy annak a hülyehajú gyereknek a barátja? +Láttalak titeket együtt tengeni +Az a rossz hírem, hogy ki lett lakoltatva. "
           
         }
       } else {
