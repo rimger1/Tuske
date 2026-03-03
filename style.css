@@ -321,13 +321,13 @@
     left: 5%;
 }
 #jobbKarakter{
-    background-image: url(kepek/tuske.png);
+    background-image: url(kepek/tulaj.png);
     background-size: cover;
     position: absolute;
-    aspect-ratio: 1/1;
-    top: 198px;
+    aspect-ratio: 0.45/1;
+    top: 220px;
     height: 510px;
-    right: 5%;
+    right: 7%;
 }
 #szovegMezo{   
     background-image: url(kepek/hatter.png);
