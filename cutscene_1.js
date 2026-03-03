@@ -104,10 +104,14 @@ async function Mozgas(){
     case 4:
       szogVisszaallitas();
       HatterChange(szog,"kepek/szog_ul.png");
-      szog.style.position = "absolute";
       szog.style.transform = "rotate(0deg)";
       szog.style.transition= "top 0.5s ease";
-      szog.style.top= "230px";
+      //szog ul
+/*       szog.style.top= "280px";
+      szog.style.height= "700px";
+      szog.style.right="41%";
+      szog.style.aspectRatio="410/1400";
+ */
       HatterChange(hatter, "kepek/szogszoba_reggel_pixel.png");
       break;
     case 5:
@@ -116,6 +120,12 @@ async function Mozgas(){
       await sleep(2900)
       HatterChange(hatter,"kepek/buli_pixel.png");
       HatterChange(szog,"kepek/szog.png");
+      //szog bulizik
+/*       szog.style.top= "270px";
+      szog.style.height= "450px";
+      szog.style.right="8%";
+      szog.style.aspectRatio="1015/400";
+ */      
       fade.classList.add("out");
       tovBtn.style.display="none";
       tuske.style.display="block"
@@ -133,6 +143,12 @@ async function Mozgas(){
       await sleep(2900)
       HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png");
       HatterChange(szog,"kepek/szog_all.png");
+      //szog all a szobaban
+      szog.style.top= "260px";
+      szog.style.height= "860px";
+      szog.style.right="50%";
+      szog.style.aspectRatio="240/1420";
+      
       tuske.style.display="none"
       fade.classList.add("out");
       tancVege=true;

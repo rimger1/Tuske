@@ -487,6 +487,9 @@
     animation: fadeOut 3s forwards ease;
 }
 #jatekcut{
+    min-height: 100vh;    
+    background-position: center;
+    background-attachment: scroll;   
     background-image: url(kepek/szogszoba_fentrol_pixel.png);  
     background-repeat: no-repeat;
     background-size: cover;
@@ -556,6 +559,17 @@
     transform: rotate(9deg);
     transition: 0.3s ease;
 }
+
+
+/*szog all a szobaban
+#karakterasd{
+    aspect-ratio: 240/1420;
+    top: 260px;
+    height: 860px;
+    right: 50%; 
+}*/
+
+
 #karakter2{
     background-image: url(kepek/tuske.png);
     background-size: cover;
@@ -611,22 +625,10 @@
     right: 24%; 
 }*/
 
-/*szog all a szobaban
-#karakterasd{
-    background-image: url(kepek/szog_all.png);
-    background-size: cover;
-    position: absolute;
-    aspect-ratio: 240/1420;
-    top: 260px;
-    height: 860px;
-    right: 50%; 
-}*/
+
 
 /*szog ul az agyban
 #karakterasd{
-    background-image: url(kepek/szog_ul.png);
-    background-size: cover;
-    position: absolute;
     aspect-ratio: 410/1400;
     top: 280px;
     height: 700px;
