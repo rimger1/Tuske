@@ -1,4 +1,4 @@
-let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ?? +HALLÓ! +Ez tényleg meglépett a telója nélkül... +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni! +ITT VAGY?? HELLÓ? +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével... +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság."
+let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ??(folyoso) +HALLÓ!(konyha) +Ez tényleg meglépett a telója nélkül...(konyha) +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni!(konyhakozel) +ITT VAGY?? HELLÓ? (wc) +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével...(folyoso) +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság.(dolyoso)"
 let tortSzoveg = [];
 let currantIndex = 0;
 let tancIndex=0;
@@ -107,11 +107,11 @@ async function Mozgas(){
       szog.style.transform = "rotate(0deg)";
       szog.style.transition= "top 0.5s ease";
       //szog ul
-/*       szog.style.top= "280px";
+      szog.style.top= "280px";
       szog.style.height= "700px";
       szog.style.right="41%";
       szog.style.aspectRatio="410/1400";
- */
+
       HatterChange(hatter, "kepek/szogszoba_reggel_pixel.png");
       break;
     case 5:
@@ -121,11 +121,11 @@ async function Mozgas(){
       HatterChange(hatter,"kepek/buli_pixel.png");
       HatterChange(szog,"kepek/szog.png");
       //szog bulizik
-/*       szog.style.top= "270px";
-      szog.style.height= "450px";
-      szog.style.right="8%";
-      szog.style.aspectRatio="1015/400";
- */      
+      szog.style.top= "70px";
+      szog.style.height= "800px";
+      szog.style.right="10%";
+      szog.style.aspectRatio="1/1";
+      
       fade.classList.add("out");
       tovBtn.style.display="none";
       tuske.style.display="block"
@@ -174,6 +174,22 @@ async function Mozgas(){
       nev.style.display="block"
       HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png")
       szog.style.display="block"
+      break;
+    case 12:
+      HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
+      break;
+    case 13:
+      HatterChange(hatter,"kepek/szogkonyha_pixel.png")
+      break;
+    case 15:
+      HatterChange(hatter,"kepek/tusketelefon_pixel.png")
+      break;
+    case 16:
+      HatterChange(hatter,"kepek/szogfurdoszoba_pixel.png")
+      break;
+    case 17:
+      HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
+      break;
   } 
 }
 
