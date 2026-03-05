@@ -149,7 +149,7 @@ function kilakoltatas(dv) {
   console.log("kilakoltatas");
   karakternev.innerHTML = "Szög";
   cutszoveg.innerHTML = "";
-  szoveg = "Remélem be tudok jutni valahogy... +Csak nem alszik még mindig ez a bolond.";
+  szoveg = "Remélem be tudok jutni valahogy... +Csak nem alszik még mindig...";
   hatter.style.backgroundImage = `url("kepek/tuskekilakoltatas.png")`;
   storytelling();
   balkarakterbeszel();
@@ -192,7 +192,7 @@ function kilakoltatas(dv) {
           function lakber() {
              
             dialogvege = false;
-            szoveg = "+ Hát hapsim mióta? +Három mocskos hónapja. +Már úgy voltam bűnvadászokat hívok, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +Nézd meg a postaládáját, talán találsz valamit.";
+            szoveg = "+ Hát öcsém mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +De mindegy a végén mégis én jártam jól, mi? Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van meg az ő baja. +Nézd meg a postaládáját, talán találsz valamit. +Szerelmes levelet neked, hehe...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -207,7 +207,7 @@ function kilakoltatas(dv) {
           function kilakoltatasdatum() {
              
             dialogvege = false;
-            szoveg = "+ Hát hapsim tegnap délután. +Felszívódott, így lakatost kellett hívnom az ajtóhoz, hogy bejussak.+ Ezek a mai fiatalok nincsenek tekintettel semmire... +Nézd meg a postaládáját, talán találsz valamit.";
+            szoveg = "+ Hát öcsém két hete az egyik délután volt rá erőm és energiám. +Felszívódott, így lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a bolondot, égett a pofám... + Ezek a mai fiatalok nincsenek tekintettel semmire... +Nézd meg a postaládáját, talán találsz valamit. +Szerelmes levelet neked, hehe...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -218,7 +218,7 @@ function kilakoltatas(dv) {
           function hagyottittvalamit() {
              
             dialogvege = false;
-            szoveg = "+ Pár ruhát itt hagyott, azon kívül semmit. +Ezek a mai fiatalok nincsenek tekintettel semmire... +Talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit...";
+            szoveg = "+ Pár hülye ruhát itt hagyott, azon kívül semmit. +Ezek a mai fiatalok nincsenek tekintettel semmire... +Talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit, az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -255,7 +255,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
           szoveg = "...";
-          //szoveg = "Jó napot! +Te vagy annak a hülyehajú gyereknek a barátja? +Láttalak titeket együtt tengeni +Az a rossz hírem, hogy ki lett lakoltatva. "
+          //szoveg = "Szevasz fiam! +Te vagy annak a hülyehajú gyereknek a cimbije? +Láttalak titeket együtt tengeni az épület körül +Ha őt keresed akkor rossz hírem van, kilakoltattam a gyereket. +Nem fizetett egy pengőt se már mióta. Az én zsebeimet meg belepi a por. +Többet itt ne keresd nem jön már szerintem. A többi lakos is mondja, hogy eltűnt, nem jár az már erre, senki sem látja egy ideje... "
           
         }
       } else {
