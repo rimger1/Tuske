@@ -31,7 +31,7 @@ function balkarakterbeszel(){
     const element2 = document.getElementById("jobbKarakter");
     element2.style.position = "absolute"; 
     element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease"; 
-    element2.style.right = "5%";
+    element2.style.right = "9%";
     element2.style.height = "510px";
     element2.style.top = "198px";
 }
@@ -48,7 +48,7 @@ function jobbkarkterbeszel(){
   element2.style.transition = "right 0.4s ease"; 
   element2.style.position = "absolute"; 
   element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease"; 
-  element2.style.right = "10%";
+  element2.style.right = "16%";
   element2.style.height = "630px";
   element2.style.top = "130px"; 
 }
@@ -232,8 +232,10 @@ function kilakoltatas(dv) {
         } 
         else if(dialogvegeCount === 3) {
           storytelling();
+          balkarakterbeszel();
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
+          cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
           szoveg="+ Na jó, már kezd az idegeimre menni ez a csávó";
           
@@ -244,7 +246,7 @@ function kilakoltatas(dv) {
         
         else {
           element2.style.visibility = "visible";
-          element2.style.right = "10%";
+          element2.style.right = "14%";
           element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
           jobbkarkterbeszel();
           dialogvege = false;
