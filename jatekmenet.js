@@ -69,7 +69,7 @@ async function Kiir(megadottszoveg){
 
   megadottszoveg.innerHTML = "";
   for (let i = 0; i < tortSzoveg[currantIndex].length; i++) {
-    
+    tovabbgomb.disabled = true;
     megadottszoveg.innerHTML += tortSzoveg[currantIndex][i];
     await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
   }
@@ -231,13 +231,43 @@ function kilakoltatas(dv) {
 
         } 
         else if(dialogvegeCount === 3) {
+          
           storytelling();
           balkarakterbeszel();
+          dialogvege = false;
+          tovabbg();
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ Na jó, már kezd az idegeimre menni ez a csávó";
+          szoveg=" Na jó, már kezd az idegeimre menni ez a csávó+ Kösz az infót. Most kereshetem.";
+          
+        }
+
+        else if(dialogvegeCount === 4) {
+          
+          storytelling();
+          jobbkarkterbeszel();
+          dialogvege = false;
+          tovabbg();
+          karakternev.innerHTML = "Tulaj";
+          cutszoveg.innerHTML = "";
+          karakternev.style.color = "darkgreen";
+          cutszoveg.style.color = "darkgreen";
+          szoveg="Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
+          
+        }
+        else if(dialogvegeCount === 5) {
+          
+          storytelling();
+          balkarakterbeszel();
+          dialogvege = false;
+          tovabbg();
+          karakternev.innerHTML = "Szög";
+          karakternev.style.color = "black";
+          cutszoveg.style.color = "black";
+          cutszoveg.innerHTML = "";
+          szoveg="+ ...+ Bolond..+ Na nézzük a postaládát.";
           
         }
         
