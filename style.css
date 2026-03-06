@@ -324,9 +324,9 @@
     background-image: url(kepek/tulaj.png);
     background-size: cover;
     position: absolute;
-    aspect-ratio: 0.45/1;
+    aspect-ratio: 0.35/1;
     top: 220px;
-    height: 510px;
+    height: 800px;
     right: 7%;
     animation: doles 2.5s infinite ease-in-out;
 }
