@@ -192,7 +192,7 @@ function kilakoltatas(dv) {
           function lakber() {
              
             dialogvege = false;
-            szoveg = "+ Hát öcsém mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +De mindegy a végén mégis én jártam jól, mi? Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van meg az ő baja. +Nézd meg a postaládáját, talán találsz valamit. +Szerelmes levelet neked, hehe...";
+            szoveg = "+ Hát öcsém mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +De mindegy a végén mégis én jártam jól, mi? Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van meg az ő baja. +Nézd meg a postaládáját, talán találsz valamit.";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
