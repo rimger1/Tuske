@@ -192,7 +192,7 @@ function kilakoltatas(dv) {
           function lakber() {
              
             dialogvege = false;
-            szoveg = "+ Hát öcsém mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +De mindegy a végén mégis én jártam jól, mi? Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van meg az ő baja. +Nézd meg a postaládáját, talán találsz valamit.";
+            szoveg = "+ Hát öcsém... +Mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Engem meg itthagyott, hogy törődjek a hivatalos baromságokkal. +Mit képzel az ilyen? +Aztán meg kérdik tőlem az emberek, hogy miért veszekedek az asszonnyal ennyit... +Mert ők mit csinálnának? +Nem? +... +De mindegy a végén mégis én jártam jól, mi? +Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van, az meg az ő baja. +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -207,7 +207,7 @@ function kilakoltatas(dv) {
           function kilakoltatasdatum() {
              
             dialogvege = false;
-            szoveg = "+ Hát öcsém két hete az egyik délután volt rá erőm és energiám. +Felszívódott, így lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a bolondot, égett a pofám... + Ezek a mai fiatalok nincsenek tekintettel semmire... +Nézd meg a postaládáját, talán találsz valamit. +Szerelmes levelet neked, hehe...";
+            szoveg = "+ Hát öcsém két hete délután volt rá időm és energiám. +Kedvem sincs az ilyenekkel foglalkozni. +Felszívódott. + Lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a gyreket, égett a pofám... + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -218,7 +218,7 @@ function kilakoltatas(dv) {
           function hagyottittvalamit() {
              
             dialogvege = false;
-            szoveg = "+ Pár hülye ruhát itt hagyott, azon kívül semmit. +Ezek a mai fiatalok nincsenek tekintettel semmire... +Talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit, az újságait is nekem kellett kidobálni a földről...";
+            szoveg = "+ Pár hülye ruhát itt hagyott, azon kívül semmit. +Kellenek? +Vagy... inkább hagyjad, most nem fogok felmenni értük. +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről... + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Tré banda...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -242,7 +242,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ Na jó, már kezd az idegeimre menni ez a csávó+ Kösz az infót. Most kereshetem.";
+          szoveg="+ (Na jó, már kezd az idegeimre menni ez a csávó...) + Oké, kösz az infót.";
           
         }
 
@@ -256,7 +256,7 @@ function kilakoltatas(dv) {
           cutszoveg.innerHTML = "";
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
-          szoveg="+ Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
+          szoveg="+ Szívesen. + *Sóhajt* Jólvan... engem innentől hagyjál a hülyeségeitekkel. +Nincs ezekre időm, elfoglalt vagyok. + Focit nézek és verem az asszonyt.";
           
         }
         else if(dialogvegeCount === 5) {
@@ -269,7 +269,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ ...+ Bolond..+ Na nézzük a postaládát.";
+          szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
           
         }
         
