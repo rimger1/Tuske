@@ -232,15 +232,17 @@ function kilakoltatas(dv) {
         } 
         else if(dialogvegeCount === 3) {
           
-          storytelling();
-          balkarakterbeszel();
+          
+          
           dialogvege = false;
+          balkarakterbeszel();
           tovabbg();
+          storytelling();
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg=" Na jó, már kezd az idegeimre menni ez a csávó+ Kösz az infót. Most kereshetem.";
+          szoveg="+ Na jó, már kezd az idegeimre menni ez a csávó+ Kösz az infót. Most kereshetem.";
           
         }
 
@@ -254,7 +256,7 @@ function kilakoltatas(dv) {
           cutszoveg.innerHTML = "";
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
-          szoveg="Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
+          szoveg="+ Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
           
         }
         else if(dialogvegeCount === 5) {
