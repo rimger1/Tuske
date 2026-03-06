@@ -331,8 +331,8 @@
     animation: doles 2.5s infinite ease-in-out;
 }
 @keyframes doles {
-    from { transform:rotateX('15') }
-    to   { transform:rotateX('-15') }
+    from { transform:rotate(-15deg) }
+    to   { transform:rotate(15deg) }
 }
 #szovegMezo{   
     background-image: url(kepek/hatter.png);
