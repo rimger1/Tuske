@@ -192,7 +192,7 @@ function kilakoltatas(dv) {
           function lakber() {
              
             dialogvege = false;
-            szoveg = "+ Hát öcsém mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +De mindegy a végén mégis én jártam jól, mi? Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van meg az ő baja. +Nézd meg a postaládáját, talán találsz valamit. +Szerelmes levelet neked, hehe...";
+            szoveg = "+ Hát öcsém mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Ezek a mai fiatalok nincsenek tekintettel semmire... +De mindegy a végén mégis én jártam jól, mi? Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van meg az ő baja. +Nézd meg a postaládáját, talán találsz valamit.";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -232,15 +232,17 @@ function kilakoltatas(dv) {
         } 
         else if(dialogvegeCount === 3) {
           
-          storytelling();
-          balkarakterbeszel();
+          
+          
           dialogvege = false;
+          balkarakterbeszel();
           tovabbg();
+          storytelling();
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg=" Na jó, már kezd az idegeimre menni ez a csávó+ Kösz az infót. Most kereshetem.";
+          szoveg="+ Na jó, már kezd az idegeimre menni ez a csávó+ Kösz az infót. Most kereshetem.";
           
         }
 
@@ -254,7 +256,7 @@ function kilakoltatas(dv) {
           cutszoveg.innerHTML = "";
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
-          szoveg="Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
+          szoveg="+ Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
           
         }
         else if(dialogvegeCount === 5) {
