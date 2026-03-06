@@ -324,10 +324,16 @@
     background-image: url(kepek/tulaj.png);
     background-size: cover;
     position: absolute;
-    aspect-ratio: 0.45/1;
+    aspect-ratio: 0.35/1;
     top: 220px;
-    height: 510px;
+    height: 800px;
     right: 7%;
+    transform-origin: bottom center;
+    animation: doles 4s infinite alternate-reverse;
+}
+@keyframes doles {
+    from { transform:rotate(0deg) }
+    to   { transform:rotate(10deg) }
 }
 #szovegMezo{   
     background-image: url(kepek/hatter.png);
@@ -571,6 +577,7 @@
     height: 800px;
     right: 50%;
     display: none;
+    transform: scaleX(-1);
 }
 
 
