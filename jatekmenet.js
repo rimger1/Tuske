@@ -259,12 +259,18 @@ function kilakoltatas(dv) {
           szoveg="+ Jólvan, de engem hagyjál a hülyeségeitekkel. +Elfoglalt vagyok.+ Focit nézek és verem az asszonyt.";
           
         }
+        
         else if(dialogvegeCount === 5) {
           
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
+          element2.style.position = "absolute";
+          element2.style.transform = "scaleX(-1)";
+          element2.style.transition= "0.6s ease"
+          element2.style.transition = "right 1s ease, top 0.8s ease, height 0.7s ease";
+          element2.style.right = "-20%";
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
