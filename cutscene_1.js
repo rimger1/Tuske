@@ -1,4 +1,4 @@
-let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ??(folyoso) +HALLÓ!(konyha) +Ez tényleg meglépett a telója nélkül...(konyha) +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni!(konyhakozel) +ITT VAGY?? HELLÓ? (wc) +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével...(folyoso) +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság.(dolyoso)"
+let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* + +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ??(folyoso) +HALLÓ!(konyha) +Ez tényleg meglépett a telója nélkül...(konyha) +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni!(konyhakozel) +ITT VAGY?? HELLÓ? (wc) +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével...(folyoso) +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság.(dolyoso)"
 let tortSzoveg = [];
 let currantIndex = 0;
 let tancIndex=0;
@@ -12,6 +12,12 @@ const fade =document.getElementById("fade");
 const nev =document.getElementById("karakterNev");
 
 let clickCounter = 0;
+
+let waitmin=5  //20
+let waitmax=20  //100
+
+
+
 
 /*fade levetele*/
 setTimeout(fadeOff, 2500);
@@ -43,7 +49,7 @@ async function Kiir(){
   for (let i=0; i < tortSzoveg[currantIndex].length; i++)
   {
     szovegTx.innerHTML += tortSzoveg[currantIndex][i];
-    //await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
+    await sleep(Math.floor(Math.random() * (waitmax - waitmin + 1) + waitmin));
 
   }
 
@@ -163,31 +169,35 @@ async function Mozgas(){
       await sleep(800)
       szog.style.transform = "scaleX(1)";
       break;
-    case 9:
+    case 8:
       szovegTx.style.marginTop="70px"
       nev.style.display="none"
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
       szog.style.display="none"
+      tovBtn.click();
       break;
     case 10:
+      tovBtn.click();
+      HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png")
       szovegTx.style.marginTop="0px"
       nev.style.display="block"
-      HatterChange(hatter,"kepek/szogszoba_reggel_pixel.png")
       szog.style.display="block"
       break;
-    case 12:
+    case 13:
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
       break;
-    case 13:
+    case 14:
       HatterChange(hatter,"kepek/szogkonyha_pixel.png")
       break;
-    case 15:
+    case 16:
+      szog.style.display="none"
       HatterChange(hatter,"kepek/tusketelefon_pixel.png")
       break;
-    case 16:
+    case 17:
+      szog.style.display="block"
       HatterChange(hatter,"kepek/szogfurdoszoba_pixel.png")
       break;
-    case 17:
+    case 18:
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
       break;
   } 
