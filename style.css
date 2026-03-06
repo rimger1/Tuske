@@ -328,6 +328,11 @@
     top: 220px;
     height: 510px;
     right: 7%;
+    animation: doles 2.5s infinite ease-in-out;
+}
+@keyframes doles {
+    from { transform:rotateX('15') }
+    to   { transform:rotateX('-15') }
 }
 #szovegMezo{   
     background-image: url(kepek/hatter.png);
@@ -571,6 +576,7 @@
     height: 800px;
     right: 50%;
     display: none;
+    transform: scaleX(-1);
 }
 
 
