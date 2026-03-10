@@ -17,6 +17,9 @@ let dialogvege=false;
 item.style.visibility = "hidden";
 let hovakattint=0;
 
+let waitmin=15;
+let waitmax=40;
+
 
 
 
@@ -31,8 +34,8 @@ function balkarakterbeszel(){
     const element2 = document.getElementById("jobbKarakter");
     element2.style.position = "absolute"; 
     element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease"; 
-    element2.style.right = "9%";
-    element2.style.height = "510px";
+    element2.style.right = "12%";
+    element2.style.height = "710px";
     element2.style.top = "198px";
 }
 function jobbkarkterbeszel(){
@@ -48,7 +51,7 @@ function jobbkarkterbeszel(){
   element2.style.transition = "right 0.4s ease"; 
   element2.style.position = "absolute"; 
   element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease"; 
-  element2.style.right = "16%";
+  element2.style.right = "25%";
   element2.style.height = "800px";
   element2.style.top = "130px"; 
 }
@@ -71,7 +74,7 @@ async function Kiir(megadottszoveg){
   for (let i = 0; i < tortSzoveg[currantIndex].length; i++) {
     tovabbgomb.disabled = true;
     megadottszoveg.innerHTML += tortSzoveg[currantIndex][i];
-    await sleep(Math.floor(Math.random() * (100 - 20 + 1) + 20));
+    await sleep(Math.floor(Math.random() * (waitmax - waitmin + 1) + waitmin));
   }
   if (currantIndex < tortSzoveg.length - 1) {
     currantIndex++;
