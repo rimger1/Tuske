@@ -1,4 +1,4 @@
-let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* + +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ??(folyoso) +HALLÓ!(konyha) +Ez tényleg meglépett a telója nélkül...(konyha) +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni!(konyhakozel) +ITT VAGY?? HELLÓ? (wc) +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével...(folyoso) +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság.(dolyoso)"
+let szoveg = "Fhuu... +Szét megy a fejem... +Mi történt az este? +Mennyi az idő egyáltalán? +Bakker jól ellehettünk... +Hol van Tüske amúgy? Sehol se látom... +Asszem együtt jöttünk haza, mert emlékszek, hogy elhányta magát a konyhában. +Merre van ez a gyerek? Felhívom. +*Távoli csörgés* + +Ez a csávó most vagy itt van, vagy itthagyta a telóját. +Na megnézem mizu. +HELLÓ?? +HALLÓ! +Ez tényleg meglépett a telója nélkül... +Ez a pénztárcája? Nem hiszem el, egyszer a fejét fogja elhagyni! +ITT VAGY?? HELLÓ?  +Szerintem hazament hajnalban és itthagyott mindent a részeg fejével... +Mindegy elmegyek hozzá, megkérdem hogy milyen a másnaposság. + "
 let tortSzoveg = [];
 let currantIndex = 0;
 let tancIndex=0;
@@ -13,8 +13,8 @@ const nev =document.getElementById("karakterNev");
 
 let clickCounter = 0;
 
-let waitmin=5  //20
-let waitmax=20  //100
+let waitmin=15  //15
+let waitmax=60    //100
 
 
 
@@ -164,6 +164,8 @@ async function Mozgas(){
       fadeOff();
       break;
     case 6:
+      fade.classList.remove("out");
+      fade.classList.remove("in");
       szog.style.transition= "0.6s ease"
       szog.style.transform = "scaleX(-1)";
       await sleep(800)
@@ -174,6 +176,7 @@ async function Mozgas(){
       nev.style.display="none"
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
       szog.style.display="none"
+      await sleep(1500);
       tovBtn.click();
       break;
     case 10:
@@ -185,9 +188,22 @@ async function Mozgas(){
       break;
     case 13:
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
+      //foloyoso
+
+      szog.style.aspectRatio="240/1420"
+      szog.style.top="240px"
+      szog.style.height="900px"
+      szog.style.right="24%"
       break;
     case 14:
       HatterChange(hatter,"kepek/szogkonyha_pixel.png")
+      //konyha
+
+      szog.style.aspectRatio="240/1420"
+      szog.style.top="220px"
+      szog.style.height="960px"
+      szog.style.right="60%"
+      szog.style.transform="scaleX(-1)"
       break;
     case 16:
       szog.style.display="none"
@@ -196,10 +212,29 @@ async function Mozgas(){
     case 17:
       szog.style.display="block"
       HatterChange(hatter,"kepek/szogfurdoszoba_pixel.png")
+      //furdo
+
+      szog.style.aspectRatio="240/1420"
+      szog.style.top="150px"
+      szog.style.height="1500px"
+      szog.style.right="77%"
+      szog.style.transform="scaleX(-1)"
       break;
     case 18:
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
+      //foloyoso
+
+      szog.style.transform="scaleX(1)"
+      szog.style.aspectRatio="240/1420"
+      szog.style.top="240px"
+      szog.style.height="900px"
+      szog.style.right="24%"
       break;
+    case 19:
+      fadeOn();
+      fade.classList.add("in");
+      await sleep(1500)
+      window.location.href = "play.html"
   } 
 }
 
