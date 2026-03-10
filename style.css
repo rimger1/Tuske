@@ -446,6 +446,7 @@
 #tuske-feher {
     opacity: 0;
     transition: opacity 1s ease;
+    animation: mozgologo 1.2s linear infinite alternate;
 }
 .fade-out {
     animation: fadeOut 1.5s forwards ease;
@@ -456,7 +457,10 @@
     to   { opacity: 0; }
 }
 
-
+@keyframes mozgologo {
+    from { transform:rotate(-0.5deg) }
+    to   { transform:rotate(0.5deg) }
+}
 
 
 
