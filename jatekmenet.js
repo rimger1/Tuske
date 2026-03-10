@@ -210,7 +210,7 @@ function kilakoltatas(dv) {
           function kilakoltatasdatum() {
              
             dialogvege = false;
-            szoveg = "+ Hát öcsém két hete délután volt rá időm és energiám. +Kedvem sincs az ilyenekkel foglalkozni. +Felszívódott. + Lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a gyreket, égett a pofám... + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
+            szoveg = "+ Hát öcsém két hete délután volt rá időm és energiám. +Kedvem sincs az ilyenekkel foglalkozni. +Felszívódott. + Lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a gyreket, égett a pofám... +Mit képzel az ilyen? +Aztán meg kérdik tőlem az emberek, hogy miért veszekedek az asszonnyal ennyit... +Mert ők mit csinálnának? +Nem? +... +De mindegy a végén mégis én jártam jól, mi? +Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van, az meg az ő baja. + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -221,7 +221,7 @@ function kilakoltatas(dv) {
           function hagyottittvalamit() {
              
             dialogvege = false;
-            szoveg = "+ Pár hülye ruhát itt hagyott, azon kívül semmit. +Kellenek? +Vagy... inkább hagyjad, most nem fogok felmenni értük. +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről... + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Tré banda...";
+            szoveg = "+ Pár hülye ruhát itt hagyott, azon kívül semmit. +Kellenek? +Vagy... inkább hagyjad, most nem fogok felmenni értük. +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről... + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Tré banda... +És rám szokták mondani, hogy reménytelen vagyok. +Hát akkor? +Ti fiatalok mik vagytok? +Nem? +Most szerinted így néz ki egy életképtelen suttyó, mint én? +... +Mindegy is... +Legalább már nem kell elviselnem azt a gyereket annyi a lényeg.";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -245,7 +245,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ (Na jó, már kezd az idegeimre menni ez a csávó...) + Oké, kösz az infót.";
+          szoveg="+ Na jó, már most kezd az idegeimre menni ez a csávó... + Oké, kösz az infót.";
           
         }
 
@@ -296,7 +296,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
           szoveg = "...";
-          //szoveg = "Szevasz fiam! +Te vagy annak a hülyehajú gyereknek a cimbije? +Láttalak titeket együtt tengeni az épület körül +Ha őt keresed akkor rossz hírem van, kilakoltattam a gyereket. +Nem fizetett egy pengőt se már mióta. Az én zsebeimet meg belepi a por. +Többet itt ne keresd nem jön már szerintem. A többi lakos is mondja, hogy eltűnt, nem jár az már erre, senki sem látja egy ideje... "
+          szoveg = "Szevasz fiam! +Te vagy annak a hülyehajú gyereknek a cimbije? +Láttalak titeket együtt tengeni az épületem körül. +Ha őt keresed akkor rossz hírem van, kilakoltattam a gyereket. +Nem fizetett egy pengőt se már mióta... + Az én zsebeimet meg belepi a por. +Többet itt ne keresd, nem jön már szerintem. + A többi lakos is mondja, hogy eltűnt, nem jár az már erre, senki sem látja egy ideje... +Bár nekem ez csak jó hír... "
           
         }
       } else {
