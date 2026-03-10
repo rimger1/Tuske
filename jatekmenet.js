@@ -270,7 +270,9 @@ function kilakoltatas(dv) {
           dialogvege = false;
           tovabbg();
           element2.style.position = "absolute";
-          element2.style.transform = "scaleX(-1)";
+          element2.style.animation="none";
+          element2.style.transform="scaleX(-1)";
+           
           element2.style.transition= "0.6s ease"
           element2.style.transition = "right 1s ease, top 0.8s ease, height 0.7s ease";
           element2.style.right = "-20%";
