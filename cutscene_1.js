@@ -17,7 +17,7 @@ let waitmin=15  //15
 let waitmax=60    //100
 
 
-
+szog.style.animation="none"
 
 /*fade levetele*/
 setTimeout(fadeOff, 2500);
@@ -108,6 +108,7 @@ async function Tanc(){
 async function Mozgas(){
   switch(clickCounter){
     case 4:
+      szog.style.animation="fejfaj 1.5s linear infinite alternate"
       szogVisszaallitas();
       HatterChange(szog,"kepek/szog_ul.png");
       szog.style.transform = "rotate(0deg)";
@@ -143,6 +144,7 @@ async function Mozgas(){
 
       //buli vege
 
+      szog.style.animation="none"
       await sleep(4000);
       fadeOn();
       fade.classList.add("in");
