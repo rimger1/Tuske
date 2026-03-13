@@ -14,9 +14,6 @@
     margin: 0 auto;
     margin-top: 50px;
 }
-#rights{
-    color:rgb(133, 133, 133);
-}
 #start{
     all: unset;
     background-image: url(kepek/TUSKE_start.png);
@@ -53,18 +50,19 @@
     position: absolute;
     width: 99vw;
     text-align: center;
+    color:rgb(133, 133, 133);
 }
 #from{
     margin-top: 65px;
-
 }
 #logo{
     background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
     aspect-ratio: 1/1;
     width: 80px;
     background-size: cover;
-    float: right;
-    margin-right: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
 }
 #from,#rights {   
     font-family: "Indie Flower", cursive;   
