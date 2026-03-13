@@ -1,0 +1,30 @@
+/*index html */
+
+@media (max-width: 1023px){
+    #tuske{
+        background-image: url(kepek/TUSKE_logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 97vw;
+        max-width: 800px;
+        aspect-ratio: 16/6;
+        margin-top: clamp(20px,5vw,50px);
+    }
+    #from{
+        margin-top: clamp(20px,8vw,65px);
+    }
+    #logo{
+        background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
+        aspect-ratio: 1/1;
+        width: clamp(40px,10vw,80px);
+        background-size: cover;
+        position: absolute;
+        right: clamp(15px, 5%,30px);
+        bottom: 20px;
+    }
+    #rights{
+        width: clamp(300px, 80vw, 820px);
+        position: absolute;
+        bottom: 20px;
+    }
+}
