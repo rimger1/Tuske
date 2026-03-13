@@ -20,7 +20,9 @@ let hovakattint=0;
 let waitmin=15;
 let waitmax=40;
 
-
+function HatterChange(valto,kep){
+  valto.style.backgroundImage = `url("${kep}")`;
+}
 
 
 function balkarakterbeszel(){
@@ -140,6 +142,39 @@ function harmadikva() {
   Kiir(cutszoveg);
   jobbkarkterbeszel();
   console.log("Harmadik választási lehetőség kiválasztva.");
+}
+
+function fadeChangeBackground(kep) {
+
+  let fade = document.createElement("div");
+
+  fade.style.position = "fixed";
+  fade.style.top = "0";
+  fade.style.left = "0";
+  fade.style.width = "100%";
+  fade.style.height = "100%";
+  fade.style.background = "black";
+  fade.style.opacity = "0";
+  fade.style.transition = "opacity 1s";
+  fade.style.pointerEvents = "none";
+  fade.style.zIndex = "9999";
+
+  document.body.appendChild(fade);
+  setTimeout(() => {
+    fade.style.opacity = "1";
+  }, 10);
+  setTimeout(() => {
+    HatterChange(hatter, kep);
+    hatter.style.backgroundPosition="0,0"
+  }, 1000);
+  setTimeout(() => {
+    fade.style.opacity = "0";
+  }, 1100);
+
+  setTimeout(() => {
+    fade.remove();
+  }, 2100);
+
 }
 
 function kilakoltatas(dv) {
@@ -282,6 +317,22 @@ function kilakoltatas(dv) {
           cutszoveg.innerHTML = "";
           szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
           
+        }
+        else if(dialogvegeCount === 6) {
+
+          storytelling();
+          balkarakterbeszel();
+          dialogvege = false;
+          tovabbg();
+          element2.style.visibility = "hidden";
+        
+          fadeChangeBackground("kepek/TUSKE-mailbox.png");
+        
+          karakternev.innerHTML = "Szög";
+          karakternev.style.color = "black";
+          cutszoveg.style.color = "black";
+          cutszoveg.innerHTML = "";
+          szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
         }
         
         
