@@ -13,6 +13,9 @@ const valaszto=document.getElementById("valaszto");
 const item=document.getElementById("hasznaltitem");
 const hud=document.getElementById("szovegMezo");
 const itemmezo=document.getElementById("itemmezo");
+let item1=document.getElementById("item1");
+let item2=document.getElementById("item2");
+let item3=document.getElementById("item3");
 
 const hatter=document.getElementById("jatektest");
 let dialogvege=false;
@@ -368,19 +371,31 @@ function kilakoltatas(dv) {
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
-          element2.style.visibility = "hidden";
+
+          fadeChangeBackground("kepek/TUSKEMailbox1.png");
           element1.style.visibility="visible";
           hud.style.visibility = "visible";
+          element2.style.visibility = "hidden";
           
-          
-        
-          fadeChangeBackground("kepek/TUSKEMailbox1.png");
+          itemmezo.style.visibility="visible";
+          item1.style.visibility="hidden";
+          item2.style.visibility="hidden";
+          item3.style.visibility="visible";
         
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ Ez egy cetli, de még milyen + Málik szét a kezemben olyan régi.+ Rajta van egy cím. Érdekes + Lehet elnézek arra.. hátha kiderül valami.";
+          szoveg="+ Ez egy cetli, de még milyen + Málik szét a kezemben olyan régi.+ Rajta van egy cím. Érdekes... + Lehet elnézek arra.. hátha kiderül valami.";
+        }
+        else if(dialogvegeCount === 9) {
+
+          storytelling();
+          balkarakterbeszel();
+          dialogvege = false;
+          tovabbg();
+
+          
         }
         
         
