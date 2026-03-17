@@ -11,9 +11,12 @@ const cutszoveg= document.getElementById("karakterSzoveg");
 const tovabbgomb=document.getElementById("tovabbgomb");
 const valaszto=document.getElementById("valaszto");
 const item=document.getElementById("hasznaltitem");
+const hud=document.getElementById("szovegMezo");
+const itemmezo=document.getElementById("itemmezo");
 
 const hatter=document.getElementById("jatektest");
 let dialogvege=false;
+itemmezo.style.visibility="hidden"
 item.style.visibility = "hidden";
 let hovakattint=0;
 
@@ -63,6 +66,7 @@ let currantIndex = 0;
 let tovabbGombPressed = false;
 let dialogvegeCount = 0;
 
+
 function sleep(ms) 
 { 
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -99,6 +103,8 @@ function tovabbg() {
     tovabbGombPressed = false; 
     Kiir(cutszoveg);
     storytelling();
+    
+
   }
 }
 
@@ -206,6 +212,7 @@ function kilakoltatas(dv) {
     };
     checkDialogvege();
   });
+  
 
   waitForDialogvege.then(() => {
     console.log("kilakoltatas true");
@@ -318,6 +325,7 @@ function kilakoltatas(dv) {
           szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
           
         }
+        
         else if(dialogvegeCount === 6) {
 
           storytelling();
@@ -325,6 +333,26 @@ function kilakoltatas(dv) {
           dialogvege = false;
           tovabbg();
           element2.style.visibility = "hidden";
+          
+        
+          fadeChangeBackground("kepek/TUSKEMailbox1.png");
+        
+          karakternev.innerHTML = "Szög";
+          karakternev.style.color = "black";
+          cutszoveg.style.color = "black";
+          cutszoveg.innerHTML = "";
+          szoveg="+ Azt mondja hogy... + Tuti az lesz az övé ami nyitva van.";
+        }
+
+        else if(dialogvegeCount === 7) {
+
+          storytelling();
+          balkarakterbeszel();
+          dialogvege = false;
+          tovabbg();
+          element2.style.visibility = "hidden";
+          element1.style.visibility="hidden";
+          hud.style.visibility = "hidden";
         
           fadeChangeBackground("kepek/TUSKE-mailbox.png");
         
@@ -332,7 +360,27 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
+          szoveg="+";
+        }
+        else if(dialogvegeCount === 8) {
+
+          storytelling();
+          balkarakterbeszel();
+          dialogvege = false;
+          tovabbg();
+          element2.style.visibility = "hidden";
+          element1.style.visibility="visible";
+          hud.style.visibility = "visible";
+          
+          
+        
+          fadeChangeBackground("kepek/TUSKEMailbox1.png");
+        
+          karakternev.innerHTML = "Szög";
+          karakternev.style.color = "black";
+          cutszoveg.style.color = "black";
+          cutszoveg.innerHTML = "";
+          szoveg="+ Ez egy cetli, de még milyen + Málik szét a kezemben olyan régi.+ Rajta van egy cím. Érdekes + Lehet elnézek arra.. hátha kiderül valami.";
         }
         
         
