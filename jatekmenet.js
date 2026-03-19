@@ -153,8 +153,32 @@ function harmadikva() {
   console.log("Harmadik választási lehetőség kiválasztva.");
 }
 
-function fadeChangeBackground(kep) {
+const fadeElements = [
+  element1,
+  element2,
+  elsoValaszthato,
+  masodikValaszthato,
+  harmadikValaszthato,
+  karakternev,
+  cutszoveg,
+  tovabbgomb,
+  valaszto,
+  item,
+  hud,
+  itemmezo,
+  item1,
+  item2,
+  item3
+];
 
+function setFade(opacity) {
+  fadeElements.forEach(el => {
+    el.style.transition = "opacity 1s";
+    el.style.opacity = opacity;
+  });
+}
+
+function fadeChangeBackground(kep) {
   let fade = document.createElement("div");
 
   fade.style.position = "fixed";
@@ -169,21 +193,25 @@ function fadeChangeBackground(kep) {
   fade.style.zIndex = "9999";
 
   document.body.appendChild(fade);
+
   setTimeout(() => {
     fade.style.opacity = "1";
+    setFade("0");
   }, 10);
+
   setTimeout(() => {
     HatterChange(hatter, kep);
-    hatter.style.backgroundPosition="0,0"
+    hatter.style.backgroundPosition = "0,0";
   }, 1000);
+
   setTimeout(() => {
     fade.style.opacity = "0";
+    setFade("1");
   }, 1100);
 
   setTimeout(() => {
     fade.remove();
   }, 2100);
-
 }
 
 function kilakoltatas(dv) {
@@ -353,9 +381,7 @@ function kilakoltatas(dv) {
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
-          element2.style.visibility = "hidden";
-          element1.style.visibility="hidden";
-          hud.style.visibility = "hidden";
+          
         
           fadeChangeBackground("kepek/TUSKE-mailbox.png");
         
