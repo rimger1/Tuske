@@ -1,11 +1,8 @@
 const element1 = document.getElementById("balKarakter");
 const element2 = document.getElementById("jobbKarakter");
-
-
 const elsoValaszthato= document.getElementById("elsoValaszthato");
 const masodikValaszthato= document.getElementById("masodikValaszthato");
 const harmadikValaszthato= document.getElementById("harmadikValaszthato");
-
 const karakternev= document.getElementById("karakterNev");
 const cutszoveg= document.getElementById("karakterSzoveg");
 const tovabbgomb=document.getElementById("tovabbgomb");
@@ -13,6 +10,7 @@ const valaszto=document.getElementById("valaszto");
 const item=document.getElementById("hasznaltitem");
 const hud=document.getElementById("szovegMezo");
 const itemmezo=document.getElementById("itemmezo");
+
 let item1=document.getElementById("item1");
 let item2=document.getElementById("item2");
 let item3=document.getElementById("item3");
@@ -29,7 +27,6 @@ let waitmax=40;
 function HatterChange(valto,kep){
   valto.style.backgroundImage = `url("${kep}")`;
 }
-
 
 function balkarakterbeszel(){
   const element1 = document.getElementById("balKarakter");
@@ -68,7 +65,6 @@ let tortSzoveg = [];
 let currantIndex = 0;
 let tovabbGombPressed = false;
 let dialogvegeCount = 0;
-
 
 function sleep(ms) 
 { 
@@ -154,7 +150,6 @@ function harmadikva() {
 }
 
 function fadeChangeBackground(kep) {
-
   let fade = document.createElement("div");
 
   fade.style.position = "fixed";
@@ -183,16 +178,9 @@ function fadeChangeBackground(kep) {
   setTimeout(() => {
     fade.remove();
   }, 2100);
-
 }
 
 function kilakoltatas(dv) {
-
-  
-
-
-
-
   console.log("kilakoltatas");
   karakternev.innerHTML = "Szög";
   cutszoveg.innerHTML = "";
@@ -238,7 +226,6 @@ function kilakoltatas(dv) {
           harmadikValaszthato.addEventListener("click", hagyottittvalamit);
 
           function lakber() {
-             
             dialogvege = false;
             szoveg = "+ Hát öcsém... +Mióta? +Három mocskos hónapja. +Már alapjárat is úgy voltam, hogy megszabadulok a bőrétől, de egyszer csak felszívódott. +Engem meg itthagyott, hogy törődjek a hivatalos baromságokkal. +Mit képzel az ilyen? +Aztán meg kérdik tőlem az emberek, hogy miért veszekedek az asszonnyal ennyit... +Mert ők mit csinálnának? +Nem? +... +De mindegy a végén mégis én jártam jól, mi? +Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van, az meg az ő baja. +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
@@ -253,7 +240,6 @@ function kilakoltatas(dv) {
             console.log("Első választási lehetőség kiválasztva.");
           }
           function kilakoltatasdatum() {
-             
             dialogvege = false;
             szoveg = "+ Hát öcsém két hete délután volt rá időm és energiám. +Kedvem sincs az ilyenekkel foglalkozni. +Felszívódott. + Lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a gyreket, égett a pofám... +Mit képzel az ilyen? +Aztán meg kérdik tőlem az emberek, hogy miért veszekedek az asszonnyal ennyit... +Mert ők mit csinálnának? +Nem? +... +De mindegy a végén mégis én jártam jól, mi? +Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van, az meg az ő baja. + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
@@ -264,7 +250,6 @@ function kilakoltatas(dv) {
                   cutszoveg.style.color = "darkgreen";
           }
           function hagyottittvalamit() {
-             
             dialogvege = false;
             szoveg = "+ Pár hülye ruhát itt hagyott, azon kívül semmit. +Kellenek? +Vagy... inkább hagyjad, most nem fogok felmenni értük. +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről... + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Tré banda... +És rám szokták mondani, hogy reménytelen vagyok. +Hát akkor? +Ti fiatalok mik vagytok? +Nem? +Most szerinted így néz ki egy életképtelen suttyó, mint én? +... +Mindegy is... +Legalább már nem kell elviselnem azt a gyereket annyi a lényeg.";
             tovabbg();
@@ -274,14 +259,8 @@ function kilakoltatas(dv) {
                   karakternev.style.color = "darkgreen";
                   cutszoveg.style.color = "darkgreen";
           }
-
-         
-
         } 
         else if(dialogvegeCount === 3) {
-          
-          
-          
           dialogvege = false;
           balkarakterbeszel();
           tovabbg();
@@ -291,11 +270,8 @@ function kilakoltatas(dv) {
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
           szoveg="+ Na jó, már most kezd az idegeimre menni ez a csávó... + Oké, kösz az infót.";
-          
         }
-
         else if(dialogvegeCount === 4) {
-          
           storytelling();
           jobbkarkterbeszel();
           dialogvege = false;
@@ -305,11 +281,8 @@ function kilakoltatas(dv) {
           karakternev.style.color = "darkgreen";
           cutszoveg.style.color = "darkgreen";
           szoveg="+ Szívesen. + *Sóhajt* Jólvan... engem innentől hagyjál a hülyeségeitekkel. +Nincs ezekre időm, elfoglalt vagyok. + Focit nézek és verem az asszonyt.";
-          
         }
-        
         else if(dialogvegeCount === 5) {
-          
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
@@ -326,17 +299,13 @@ function kilakoltatas(dv) {
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
           szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
-          
         }
-        
         else if(dialogvegeCount === 6) {
-
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
           element2.style.visibility = "hidden";
-          
         
           fadeChangeBackground("kepek/TUSKEMailbox1.png");
         
@@ -344,11 +313,10 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ Azt mondja hogy... + Tuti az lesz az övé ami nyitva van.";
+          szoveg="+ Azt mondja hogy... +Az ott az övé amelyik nyitva van? +Szerintem biztos...";
         }
 
         else if(dialogvegeCount === 7) {
-
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
@@ -366,7 +334,6 @@ function kilakoltatas(dv) {
           szoveg="+";
         }
         else if(dialogvegeCount === 8) {
-
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
@@ -386,21 +353,14 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ Ez egy cetli, de még milyen + Málik szét a kezemben olyan régi.+ Rajta van egy cím. Érdekes... + Lehet elnézek arra.. hátha kiderül valami.";
+          szoveg="+ Van benne egy cetli +Ejha! De még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if(dialogvegeCount === 9) {
-
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
-
-          
         }
-        
-        
-        
-        
         else {
           element2.style.visibility = "visible";
           element2.style.right = "14%";
@@ -413,7 +373,6 @@ function kilakoltatas(dv) {
           cutszoveg.style.color = "darkgreen";
           szoveg = "...";
           szoveg = "Szevasz fiam! +Te vagy annak a hülyehajú gyereknek a cimbije? +Láttalak titeket együtt tengeni az épületem körül. +Ha őt keresed akkor rossz hírem van, kilakoltattam a gyereket. +Nem fizetett egy pengőt se már mióta... + Az én zsebeimet meg belepi a por. +Többet itt ne keresd, nem jön már szerintem. + A többi lakos is mondja, hogy eltűnt, nem jár az már erre, senki sem látja egy ideje... +Bár nekem ez csak jó hír... "
-          
         }
       } else {
         console.log("megy a dialog");
