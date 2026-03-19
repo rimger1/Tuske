@@ -298,7 +298,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ ... + Ez bolond... + Mindegy, lecsekkolom a postaládát.";
+          szoveg="+ ... + Ez bolond... + Mi történik... + Ha Tüske itt nem volt a hetekben, akkor hol lakott ez a hülye? + Meg miért nem említett nekem erről semmit? +Mit csinált, hogy nem fizette a lakást? + ... + Mindegy, lecsekkolom a postaládát.";
         }
         else if(dialogvegeCount === 6) {
           storytelling();
@@ -353,7 +353,7 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
-          szoveg="+ Van benne egy cetli +Ejha! De még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
+          szoveg="+ Van benne egy cetli +Ejha, de még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if(dialogvegeCount === 9) {
           storytelling();
