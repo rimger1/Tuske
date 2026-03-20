@@ -354,7 +354,7 @@ function kilakoltatas(dv) {
           
         
           fadeChangeBackground("kepek/TUSKE-mailbox.png");
-        
+          
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
