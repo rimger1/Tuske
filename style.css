@@ -219,6 +219,16 @@
     background-size: cover;
     margin: auto;
 }
+#tulaj_kep{
+    background-image: url(kepek/tulaj.png);
+    aspect-ratio: 1/1;
+    width: 400px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 30px;
+    margin: auto;
+}
 #prodlogo{
     background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
     aspect-ratio: 1/1;
