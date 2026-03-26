@@ -10,6 +10,7 @@ const valaszto=document.getElementById("valaszto");
 const item=document.getElementById("hasznaltitem");
 const hud=document.getElementById("szovegMezo");
 const itemmezo=document.getElementById("itemmezo");
+const fade =document.getElementById("fade");
 
 let item1=document.getElementById("item1");
 let item2=document.getElementById("item2");
@@ -24,9 +25,7 @@ let hovakattint=0;
 let waitmin=15;
 let waitmax=40;
 
-function HatterChange(valto,kep){
-  valto.style.backgroundImage = `url("${kep}")`;
-}
+
 
 function balkarakterbeszel(){
   const element1 = document.getElementById("balKarakter");
@@ -149,65 +148,81 @@ function harmadikva() {
   console.log("Harmadik választási lehetőség kiválasztva.");
 }
 
-const fadeElements = [
-  element1,
-  element2,
-  elsoValaszthato,
-  masodikValaszthato,
-  harmadikValaszthato,
-  karakternev,
-  cutszoveg,
-  tovabbgomb,
-  valaszto,
-  item,
-  hud,
-  itemmezo,
-  item1,
-  item2,
-  item3
-];
+// const fadeElements = [
+//   element1,
+//   element2,
+//   elsoValaszthato,
+//   masodikValaszthato,
+//   harmadikValaszthato,
+//   karakternev,
+//   cutszoveg,
+//   tovabbgomb,
+//   valaszto,
+//   item,
+//   hud,
+//   itemmezo,
+//   item1,
+//   item2,
+//   item3
+// ];
 
-function setFade(opacity) {
-  fadeElements.forEach(el => {
-    el.style.transition = "opacity 1s";
-    el.style.opacity = opacity;
-  });
+// function setFade(opacity) {
+//   fadeElements.forEach(el => {
+//     el.style.transition = "opacity 1s";
+//     el.style.opacity = opacity;
+//   });
+// }
+
+// function fadeChangeBackground(kep) {
+//   let fade = document.createElement("div");
+
+//   fade.style.position = "fixed";
+//   fade.style.top = "0";
+//   fade.style.left = "0";
+//   fade.style.width = "100%";
+//   fade.style.height = "100%";
+//   fade.style.background = "black";
+//   fade.style.opacity = "0";
+//   fade.style.transition = "opacity 1s";
+//   fade.style.pointerEvents = "none";
+//   fade.style.zIndex = "9999";
+
+//   document.body.appendChild(fade);
+
+//   setTimeout(() => {
+//     fade.style.opacity = "1";
+//     setFade("0");
+//   }, 10);
+
+//   setTimeout(() => {
+//     HatterChange(hatter, kep);
+//     hatter.style.backgroundPosition = "0,0";
+//   }, 1000);
+
+//   setTimeout(() => {
+//     fade.style.opacity = "0";
+//     setFade("1");
+//   }, 1100);
+
+//   setTimeout(() => {
+//     fade.remove();
+//   }, 2100);
+// }
+
+function HatterChange(valto,kep){
+  valto.style.backgroundImage = `url("${kep}")`;
 }
 
-function fadeChangeBackground(kep) {
-  let fade = document.createElement("div");
+setTimeout(fadeOff, 2500);
 
-  fade.style.position = "fixed";
-  fade.style.top = "0";
-  fade.style.left = "0";
-  fade.style.width = "100%";
-  fade.style.height = "100%";
-  fade.style.background = "black";
-  fade.style.opacity = "0";
-  fade.style.transition = "opacity 1s";
-  fade.style.pointerEvents = "none";
-  fade.style.zIndex = "9999";
+function fadeOff(){
+  fade.style.display = "none";
+}
 
-  document.body.appendChild(fade);
 
-  setTimeout(() => {
-    fade.style.opacity = "1";
-    setFade("0");
-  }, 10);
 
-  setTimeout(() => {
-    HatterChange(hatter, kep);
-    hatter.style.backgroundPosition = "0,0";
-  }, 1000);
-
-  setTimeout(() => {
-    fade.style.opacity = "0";
-    setFade("1");
-  }, 1100);
-
-  setTimeout(() => {
-    fade.remove();
-  }, 2100);
+function fadeOn(){
+  fade.style.display = "flex";
 }
 
 function kilakoltatas(dv) {
@@ -331,41 +346,61 @@ function kilakoltatas(dv) {
           szoveg="+ ... + Ez bolond... + Mi történik... + Ha Tüske itt nem volt a hetekben, akkor hol lakott ez a hülye? + Meg miért nem említett nekem erről semmit? +Mit csinált, hogy nem fizette a lakást? + ... + Mindegy, lecsekkolom a postaládát.";
         }
         else if(dialogvegeCount === 6) {
+          fadeOn();
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
+          fade.classList.add("in");
           element2.style.visibility = "hidden";
         
-          fadeChangeBackground("kepek/TUSKEMailbox1.png");
-        
+          HatterChange(hatter,"kepek/TUSKEMailbox1.png");
+          
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
+          fade.classList.add("out");
+          fadeOff()
           cutszoveg.innerHTML = "";
           szoveg="+ Azt mondja hogy... +Az ott az övé amelyik nyitva van? +Szerintem biztos...";
         }
 
         else if(dialogvegeCount === 7) {
+          fadeOn();
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
+          fade.classList.add("in");
           
         
-          fadeChangeBackground("kepek/TUSKE-mailbox.png");
+          HatterChange(hatter,"kepek/TUSKE-mailbox.png");
           
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
+          element1.style.visibility="hidden";
+          hud.style.visibility = "hidden";
+          element2.style.visibility = "hidden";
+          
+          itemmezo.style.visibility="hidden";
+          item1.style.visibility="hidden";
+          item2.style.visibility="hidden";
+          item3.style.visibility="hidden";
+          fade.classList.add("out");
+          fadeOff();
           cutszoveg.innerHTML = "";
           szoveg="+";
+
+
         }
         else if(dialogvegeCount === 8) {
+          fadeOn();
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
+          fade.classList.add("in");
 
           fadeChangeBackground("kepek/TUSKEMailbox1.png");
           element1.style.visibility="visible";
@@ -381,6 +416,8 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
+          fade.classList.add("out");
+          fadeOff();
           szoveg="+ Van benne egy cetli +Ejha, de még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if(dialogvegeCount === 9) {
@@ -389,6 +426,8 @@ function kilakoltatas(dv) {
           dialogvege = false;
           tovabbg();
         }
+
+        
         else {
           element2.style.visibility = "visible";
           element2.style.right = "14%";
