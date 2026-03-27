@@ -23,9 +23,20 @@
         bottom: 20px;
     }
     #rights{
-        width: clamp(300px, 80vw, 820px);
+        width: clamp(300px, 60vw, 700px);
+        bottom: 10px;
         position: absolute;
-        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #start{
+        width: clamp(120px, 60vw, 250px);
+    }
+    #kreditek{
+        width: clamp(100px, 50vw, 150px);
+    }
+    #iranyitas{
+        width: clamp(90px, 45vw, 130px);
     }
 }
 
