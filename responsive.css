@@ -30,6 +30,7 @@
         transform: translateX(-50%);
     }
     #start{
+        margin-top: clamp(50px, 10vw, 90px);
         width: clamp(120px, 60vw, 250px);
     }
     #kreditek{
