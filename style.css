@@ -86,6 +86,13 @@
 }
 
 /*iranyitas*/
+#irany{
+    font-family: "Indie Flower", cursive;   
+    font-weight: 1000;   
+    font-style: normal; 
+    font-size: 80px;
+    margin: 3%;
+}
 .iranyszoveg{
     font-family: "Indie Flower", cursive;   
     font-weight: 200;   
