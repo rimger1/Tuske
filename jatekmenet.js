@@ -22,8 +22,10 @@ itemmezo.style.visibility="hidden"
 item.style.visibility = "hidden";
 let hovakattint=0;
 
-let waitmin=15;
-let waitmax=40;
+let waitmin=1;
+let waitmax=1;
+//15
+//40
 
 
 
@@ -255,7 +257,7 @@ function kilakoltatas(dv) {
     tovabbgomb.disabled = false; 
     console.log(dialogvegeCount);
 
-    const tovabbGombHandler = () => {
+    async function tovabbGombHandler() {
       if (dialogvege) {
         console.log(dialogvegeCount);
         if (dialogvegeCount === 2) {
@@ -347,11 +349,13 @@ function kilakoltatas(dv) {
         }
         else if(dialogvegeCount === 6) {
           fadeOn();
+          fade.classList.add("in");
+          await sleep(2000)
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
-          fade.classList.add("in");
+          
           element2.style.visibility = "hidden";
         
           HatterChange(hatter,"kepek/TUSKEMailbox1.png");
@@ -360,7 +364,10 @@ function kilakoltatas(dv) {
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
           fade.classList.add("out");
+          await sleep(2000)
           fadeOff()
+          fade.classList.remove("out");
+      fade.classList.remove("in");
           cutszoveg.innerHTML = "";
           szoveg="+ Azt mondja hogy... +Az ott az övé amelyik nyitva van? +Szerintem biztos...";
         }
@@ -372,23 +379,23 @@ function kilakoltatas(dv) {
           dialogvege = false;
           tovabbg();
           fade.classList.add("in");
-          
-        
+          await sleep(2000)
           HatterChange(hatter,"kepek/TUSKE-mailbox.png");
           
-          karakternev.innerHTML = "Szög";
-          karakternev.style.color = "black";
-          cutszoveg.style.color = "black";
           element1.style.visibility="hidden";
           hud.style.visibility = "hidden";
           element2.style.visibility = "hidden";
+          hatter.style.backgroundPositionY="0px"
           
           itemmezo.style.visibility="hidden";
           item1.style.visibility="hidden";
           item2.style.visibility="hidden";
           item3.style.visibility="hidden";
           fade.classList.add("out");
+          await sleep(2000)
           fadeOff();
+          fade.classList.remove("out");
+      fade.classList.remove("in");
           cutszoveg.innerHTML = "";
           szoveg="+";
 
@@ -400,9 +407,11 @@ function kilakoltatas(dv) {
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
+          
           fade.classList.add("in");
-
-          fadeChangeBackground("kepek/TUSKEMailbox1.png");
+          await sleep(2000)
+          HatterChange(hatter,"kepek/TUSKEMailbox1.png");
+          hatter.style.backgroundPositionY="-200px"
           element1.style.visibility="visible";
           hud.style.visibility = "visible";
           element2.style.visibility = "hidden";
@@ -417,14 +426,27 @@ function kilakoltatas(dv) {
           cutszoveg.style.color = "black";
           cutszoveg.innerHTML = "";
           fade.classList.add("out");
+          await sleep(2000)
           fadeOff();
+          fade.classList.remove("out");
+      fade.classList.remove("in");
+          
           szoveg="+ Van benne egy cetli +Ejha, de még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if(dialogvegeCount === 9) {
+          fadeOn();
+          fade.classList.add("in");
+          await sleep(2000)
           storytelling();
           balkarakterbeszel();
           dialogvege = false;
           tovabbg();
+
+          fade.classList.add("out");
+          await sleep(2000)
+          fadeOff();
+          fade.classList.remove("out");
+        fade.classList.remove("in");
         }
 
         
