@@ -50,11 +50,58 @@
         left: 2%;
     }
 }
-@media (max-width: 750px){
+@media (max-width: 592px){
     #vissza{
         width: 15%;
         min-width: 100px;
         left: 2%;
+    }
+    .h1{
+        padding-top: 10%;
+    } 
+}
+@media (max-width: 520px){
+    #vissza{
+        width: 15%;
+        min-width: 100px;
+        left: 2%;
+    }
+    .h1{
+        padding-top: 10%;
+    }
+    .szoveg{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .nev{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #szog_kep{
+        width: 80%;
+    }
+    #tuske_kep{
+        width: 80%;
+    }
+    #oreg_kep{
+        width: 80%;
+    }
+    #dorottya_kep{
+        width: 80%;
+    }
+    #rendor_kep{
+        width: 80%;
+    }
+    #tulaj_kep{
+        width: 80%;
+        background-size: 50%;
+    }
+}
+@media (max-width: 520px){
+
+    .h1{
+        font-size: 70px;
+        padding-top: 15%;
     }
 }
 
