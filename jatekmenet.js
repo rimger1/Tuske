@@ -442,6 +442,14 @@ function kilakoltatas(dv) {
           dialogvege = false;
           tovabbg();
 
+          
+          fadeOff();
+          
+        }
+        else if(dialogvegeCount === 10) {
+          fadeOn();
+         
+
           fade.classList.add("out");
           await sleep(2000)
           fadeOff();
