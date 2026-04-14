@@ -267,6 +267,8 @@ function kilakoltatas(dv) {
           elsoValaszthato.value = "Mióta nem fizeti a lakbért?";
           masodikValaszthato.value = "Mikor lett kilakoltatva?";
           harmadikValaszthato.value = "Hagyott itt valamit?";
+          tovabbgomb.style.visibility = "hidden";
+          tovabbgomb.disabled = true; 
 
           elsoValaszthato.addEventListener("click", lakber);
           masodikValaszthato.addEventListener("click", kilakoltatasdatum);
@@ -281,6 +283,9 @@ function kilakoltatas(dv) {
                   cutszoveg.innerHTML = "";
                   karakternev.style.color = "darkgreen";
                   cutszoveg.style.color = "darkgreen";
+                  tovabbgomb.disabled = false; 
+                  tovabbgomb.style.visibility = "visible";
+
             
             jobbkarkterbeszel();
             
@@ -295,6 +300,8 @@ function kilakoltatas(dv) {
                   cutszoveg.innerHTML = "";
                   karakternev.style.color = "darkgreen";
                   cutszoveg.style.color = "darkgreen";
+                  tovabbgomb.disabled = false; 
+                  tovabbgomb.style.visibility = "visible";
           }
           function hagyottittvalamit() {
             dialogvege = false;
@@ -305,6 +312,8 @@ function kilakoltatas(dv) {
                   cutszoveg.innerHTML = "";
                   karakternev.style.color = "darkgreen";
                   cutszoveg.style.color = "darkgreen";
+                  tovabbgomb.disabled = false; 
+                  tovabbgomb.style.visibility = "visible";
           }
         } 
         else if(dialogvegeCount === 3) {
@@ -435,27 +444,30 @@ function kilakoltatas(dv) {
         }
         else if(dialogvegeCount === 9) {
           fadeOn();
+         
           fade.classList.add("in");
           await sleep(2000)
-          storytelling();
-          balkarakterbeszel();
-          dialogvege = false;
-          tovabbg();
+         HatterChange(hatter,"kepek/backintime.png");
+         hud.style.visibility = "hidden";
+         element1.style.visibility="hidden";
+         element2.style.visibility="hidden";
+         itemmezo.style.visibility="hidden";
+         item1.style.visibility="hidden";
+         item2.style.visibility="hidden";
+         item3.style.visibility="hidden";
+         hatter.style.backgroundPositionY="0px"
+         tovabbgomb.style.visibility="hidden";
+         szoveg="";
+         cutszoveg.style.visibility="hidden";
 
-          
-          fadeOff();
+         fade.classList.add("out");
+         await sleep(2000)
+         fadeOff();
+         fade.classList.remove("out");
+         fade.classList.remove("in");
           
         }
-        else if(dialogvegeCount === 10) {
-          fadeOn();
-         
-
-          fade.classList.add("out");
-          await sleep(2000)
-          fadeOff();
-          fade.classList.remove("out");
-        fade.classList.remove("in");
-        }
+        
 
         
         else {
