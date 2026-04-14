@@ -184,6 +184,13 @@
     font-size: 24px;
     margin-bottom: 2%;
 }
+.vonal{
+    border: none;  
+    border-top: 3px dashed black;
+    width: 30%;
+    margin: 20px auto;
+
+}
 .nev{
     font-family: "Indie Flower", cursive;   
     font-weight: 300;   
