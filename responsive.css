@@ -58,6 +58,7 @@
     }
     .h1{
         padding-top: 10%;
+        font-size: 70px;
     } 
 }
 @media (max-width: 520px){
@@ -95,13 +96,6 @@
     #tulaj_kep{
         width: 80%;
         background-size: 50%;
-    }
-}
-@media (max-width: 520px){
-
-    .h1{
-        font-size: 70px;
-        padding-top: 15%;
     }
 }
 
