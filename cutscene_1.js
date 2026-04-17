@@ -143,7 +143,7 @@ async function Mozgas(){
       fade.classList.remove("in");
 
       //buli vege
-
+/* 
       szog.style.animation="none"
       await sleep(4000);
       fadeOn();
@@ -237,7 +237,7 @@ async function Mozgas(){
       fade.classList.add("in");
       await sleep(1500)
       window.location.href = "play.html"
-  } 
+ */  } 
 }
 
 

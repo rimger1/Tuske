@@ -1,11 +1,12 @@
 /*fouoldal*/
-#test{
+#test {
     text-align: center;
     background-image: url(kepek/hatter.png);
     background-repeat: repeat-y;
     background-attachment: fixed;
 }
-#tuske{
+
+#tuske {
     background-image: url(kepek/TUSKE_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -14,7 +15,8 @@
     margin: 0 auto;
     margin-top: 50px;
 }
-#start{
+
+#start {
     all: unset;
     background-image: url(kepek/TUSKE_start.png);
     background-repeat: no-repeat;
@@ -26,10 +28,12 @@
     margin-top: 90px;
     transition: 0.3s ease;
 }
-#start:hover{
+
+#start:hover {
     transform: scale(1.1);
 }
-#kreditek{
+
+#kreditek {
     all: unset;
     background-image: url(kepek/TUSKE_kreditek.png);
     background-repeat: no-repeat;
@@ -41,21 +45,25 @@
     margin-top: 30px;
     transition: 0.3s ease;
 }
-#kreditek:hover{
+
+#kreditek:hover {
     transform: scale(1.1);
 }
-#rights{
+
+#rights {
     bottom: 0;
     margin-bottom: 25px;
     position: absolute;
     width: 99vw;
     text-align: center;
-    color:rgb(133, 133, 133);
+    color: rgb(133, 133, 133);
 }
-#from{
+
+#from {
     margin-top: 65px;
 }
-#logo{
+
+#logo {
     background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
     aspect-ratio: 1/1;
     width: 80px;
@@ -64,12 +72,15 @@
     right: 30px;
     bottom: 30px;
 }
-#from,#rights {   
-    font-family: "Indie Flower", cursive;   
-    font-weight: 400;   
-    font-style: normal; 
+
+#from,
+#rights {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
-#iranyitas{
+
+#iranyitas {
     all: unset;
     background-image: url(kepek/TUSKE_iranyitas.png);
     background-repeat: no-repeat;
@@ -81,37 +92,41 @@
     display: block;
     transition: 0.3s ease;
 }
-#iranyitas:hover{    
+
+#iranyitas:hover {
     transform: scale(1.1);
 }
 
 /*iranyitas*/
-#irany{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 1000;   
-    font-style: normal; 
+#irany {
+    font-family: "Indie Flower", cursive;
+    font-weight: 1000;
+    font-style: normal;
     font-size: 80px;
     margin: 3%;
 }
-.iranyszoveg{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 200;   
-    font-style: normal; 
+
+.iranyszoveg {
+    font-family: "Indie Flower", cursive;
+    font-weight: 200;
+    font-style: normal;
     font-size: 24px;
     margin: auto;
     margin-bottom: 2%;
     width: 40%;
 }
-.iranyitasszoveg{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 200;   
-    font-style: normal; 
+
+.iranyitasszoveg {
+    font-family: "Indie Flower", cursive;
+    font-weight: 200;
+    font-style: normal;
     font-size: 24px;
     margin: auto;
     margin-bottom: 2%;
     width: 47%;
 }
-#leftclick{
+
+#leftclick {
     background-image: url(kepek/TUSKE_leftclick.png);
     aspect-ratio: 1/1;
     width: 100px;
@@ -121,7 +136,8 @@
     margin-bottom: 60px;
     margin-top: 60px;
 }
-#items{
+
+#items {
     background-image: url(kepek/TUSKE_items.png);
     aspect-ratio: 16/9;
     width: 250px;
@@ -131,7 +147,8 @@
     margin-bottom: 30px;
     margin-top: 90px;
 }
-#tovabb{
+
+#tovabb {
     background-image: url(kepek/TUSKE_tovabb_withshadow.png);
     aspect-ratio: 16/9;
     width: 200px;
@@ -141,7 +158,8 @@
     margin-bottom: 50px;
     margin-top: 80px;
 }
-#arrow{
+
+#arrow {
     background-image: url(kepek/TUSKE_arrow.png);
     aspect-ratio: 1/1;
     width: 70px;
@@ -151,7 +169,8 @@
     margin-bottom: 50px;
     margin-top: 80px;
 }
-#itemarrow{
+
+#itemarrow {
     background-image: url(kepek/TUSKE_itemarrow.png);
     aspect-ratio: 8/6;
     width: 200px;
@@ -163,77 +182,87 @@
 }
 
 /*kreditek*/
-.h1{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 1000;   
-    font-style: normal; 
+.h1 {
+    font-family: "Indie Flower", cursive;
+    font-weight: 1000;
+    font-style: normal;
     font-size: 80px;
     margin: 3%;
 }
-.h2{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 400;   
-    font-style: normal; 
+
+.h2 {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 50px;
     margin-bottom: 3%;
 }
-.szoveg{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 200;   
-    font-style: normal; 
+
+.szoveg {
+    font-family: "Indie Flower", cursive;
+    font-weight: 200;
+    font-style: normal;
     font-size: 24px;
     margin-bottom: 2%;
 }
-.vonal{
-    border: none;  
+
+.vonal {
+    border: none;
     border-top: 3px dashed black;
     width: 30%;
     margin: 20px auto;
 
 }
-.nev{
-    font-family: "Indie Flower", cursive;   
-    font-weight: 300;   
-    font-style: normal; 
+
+.nev {
+    font-family: "Indie Flower", cursive;
+    font-weight: 300;
+    font-style: normal;
     font-size: 30px;
     margin-bottom: 2%;
 }
-#szog_kep{
+
+#szog_kep {
     background-image: url(kepek/szog.png);
     aspect-ratio: 1/1;
     width: 400px;
     background-size: cover;
     margin: auto;
 }
-#tuske_kep{
+
+#tuske_kep {
     background-image: url(kepek/tuske.png);
     aspect-ratio: 1/1;
     width: 400px;
     background-size: cover;
     margin: auto;
 }
-#oreg_kep{
+
+#oreg_kep {
     background-image: url(kepek/oreg.png);
     aspect-ratio: 1/1;
     width: 400px;
     background-size: cover;
     margin: auto;
 }
-#dorottya_kep{
+
+#dorottya_kep {
     background-image: url(kepek/dorottya.png);
     aspect-ratio: 1/1;
     width: 400px;
     background-size: cover;
     margin: auto;
 }
-#rendor_kep{
+
+#rendor_kep {
     background-image: url(kepek/rendor.png);
     aspect-ratio: 1/1;
     width: 400px;
     background-size: cover;
     margin: auto;
 }
-#tulaj_kep{
+
+#tulaj_kep {
     background-image: url(kepek/tulaj.png);
     aspect-ratio: 1/1;
     width: 400px;
@@ -243,7 +272,8 @@
     background-position-y: 30px;
     margin: auto;
 }
-#prodlogo{
+
+#prodlogo {
     background-image: url(kepek/KEDVES_BOKI_PRODUCTIONS_logo.png);
     aspect-ratio: 1/1;
     width: 80px;
@@ -252,14 +282,16 @@
     margin-bottom: 2%;
     margin-top: 2%;
 }
-#rights2{
-    color:rgb(133, 133, 133);
-    font-family: "Indie Flower", cursive;   
-    font-weight: 400;   
-    font-style: normal; 
+
+#rights2 {
+    color: rgb(133, 133, 133);
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
     margin-bottom: 3.5%;
 }
-#vissza{
+
+#vissza {
     all: unset;
     background-image: url(kepek/TUSKE_vissza.png);
     aspect-ratio: 16/9;
@@ -269,15 +301,21 @@
     position: fixed;
     transition: 0.3s ease;
 }
-#vissza:hover{
+
+#vissza:hover {
     transform: scale(1.1);
 }
 
 /*ez nem tom mi*/
-#from,#rights {   font-family: "Indie Flower", cursive;   font-weight: 400;   font-style: normal; }
+#from,
+#rights {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* play*/
-#jatektest{
+#jatektest {
     background-image: url(kepek/idogephaz_reggel_pixel.png);
     background-repeat: no-repeat;
     height: 98vh;
@@ -287,62 +325,67 @@
     overflow: hidden;
 }
 
-#itemmezo{
+#itemmezo {
     position: absolute;
     background-image: url(kepek/itemhatter.png);
     background-size: cover;
     background-repeat: no-repeat;
     top: -20px;
     left: -1%;
-    aspect-ratio: 1/1;    
+    aspect-ratio: 1/1;
     width: 20%;
     height: 130px;
 }
-#item1{
+
+#item1 {
     position: absolute;
     background-image: url(kepek/kalapacs.png);
     top: 42px;
     left: 15%;
     background-size: cover;
     background-repeat: no-repeat;
-    display :block;
+    display: block;
     aspect-ratio: 1/1;
     width: 25%;
 }
-#item2{
+
+#item2 {
     position: absolute;
     background-image: url(kepek/kulcs.png);
     top: 42px;
     left: 35%;
     background-size: cover;
     background-repeat: no-repeat;
-    display :block;
+    display: block;
     aspect-ratio: 1/1;
     width: 25%;
 }
-#item3{
+
+#item3 {
     position: absolute;
     background-image: url(kepek/cetli.png);
     top: 52px;
     left: 60%;
     background-size: cover;
     background-repeat: no-repeat;
-    display :block;
+    display: block;
     aspect-ratio: 1/1;
     width: 20%;
-    
+
 }
-#balKarakter{
+
+#balKarakter {
     background-image: url(kepek/szog.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1/1;
-    transform:scaleX(-1);
+    transform: scaleX(-1);
     top: 180px;
     height: 550px;
     left: 5%;
 }
-#jobbKarakter{
+
+#jobbKarakter {
     background-image: url(kepek/tulaj.png);
     background-size: cover;
     position: absolute;
@@ -353,11 +396,18 @@
     transform-origin: bottom center;
     animation: doles 4s infinite alternate-reverse;
 }
+
 @keyframes doles {
-    from { transform:rotate(0deg) }
-    to   { transform:rotate(10deg) }
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(10deg)
+    }
 }
-#szovegMezo{   
+
+#szovegMezo {
     background-image: url(kepek/hatter.png);
     background-size: cover;
     position: absolute;
@@ -369,18 +419,20 @@
     left: 50%;
     transform: translateX(-50%);
 }
-#karakterNev{
-    font-family: "Indie Flower", cursive; 
+
+#karakterNev {
+    font-family: "Indie Flower", cursive;
     text-align: left;
     color: black;
     margin-top: 0px;
-    margin-bottom:0px;
+    margin-bottom: 0px;
     padding-left: 9%;
     font-weight: 700;
     font-size: 40px;
 }
-#karakterSzoveg{
-    font-family: "Indie Flower", cursive; 
+
+#karakterSzoveg {
+    font-family: "Indie Flower", cursive;
     text-align: left;
     color: black;
     margin-bottom: 0px;
@@ -390,7 +442,8 @@
     font-weight: 700;
     font-size: 25px;
 }
-#tovabbgomb{
+
+#tovabbgomb {
     position: absolute;
     height: 60px;
     width: fit-content;
@@ -403,42 +456,47 @@
     background-image: url(kepek/TUSKE_tovabb_withshadow.png);
     aspect-ratio: 16/9;
     background-size: contain;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
-#tovabbgomb:hover{
+
+#tovabbgomb:hover {
     transform: scale(1.1);
 }
-#elsoValaszthato{
+
+#elsoValaszthato {
     position: absolute;
     left: 15%;
     top: 50px;
-    font-family: "Indie Flower", cursive; 
+    font-family: "Indie Flower", cursive;
     font-weight: 700;
     font-size: 25px;
     border-color: transparent;
     background-color: transparent;
 }
-#masodikValaszthato{
+
+#masodikValaszthato {
     position: absolute;
     left: 15%;
     top: 100px;
-    font-family: "Indie Flower", cursive; 
+    font-family: "Indie Flower", cursive;
     font-weight: 700;
     font-size: 25px;
     border-color: transparent;
     background-color: transparent;
 }
-#harmadikValaszthato{
+
+#harmadikValaszthato {
     position: absolute;
     left: 15%;
     top: 150px;
-    font-family: "Indie Flower", cursive; 
+    font-family: "Indie Flower", cursive;
     font-weight: 700;
     font-size: 25px;
     border-color: transparent;
     background-color: transparent;
 }
-#valaszto{
+
+#valaszto {
     position: absolute;
     background-image: url(kepek/TUSKE_arrow.png);
     aspect-ratio: 1/1;
@@ -448,7 +506,8 @@
     right: 50%;
     top: 60px;
 }
-#hasznaltitem{
+
+#hasznaltitem {
     position: absolute;
     background-image: url(kepek/kalapacs.png);
     aspect-ratio: 1/1;
@@ -458,6 +517,7 @@
     right: 42%;
     top: 28px;
 }
+
 /*indul a jatek*/
 #intro {
     position: fixed;
@@ -469,17 +529,24 @@
     z-index: 9999;
     opacity: 1;
 }
+
 #tuske-feher {
     opacity: 0;
     transition: opacity 1s ease;
 }
+
 .fade-out {
     animation: fadeOut 1.5s forwards ease;
 }
-  
+
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 
@@ -491,7 +558,7 @@
 
 /*cutscene_1*/
 
-#fade{
+#fade {
     position: fixed;
     inset: 0;
     background: black;
@@ -503,31 +570,47 @@
     transition: 1s ease;
     animation: fadeOut 3s forwards ease;
 }
+
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
-#fade.in{
+
+#fade.in {
     animation: fadeIn 3s forwards ease;
 }
-#fade.out{
+
+#fade.out {
     animation: fadeOut 3s forwards ease;
 }
-#jatekcut{
-    min-height: 100vh;    
+
+#jatekcut {
+    min-height: 100vh;
     background-position: center;
-    background-attachment: scroll;   
-    background-image: url(kepek/szogszoba_fentrol_pixel.png);  
+    background-attachment: scroll;
+    background-image: url(kepek/szogszoba_fentrol_pixel.png);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     transition: 1s ease;
 }
-#next{
+
+#next {
     all: unset;
     background-image: url(kepek/TUSKE_tovabb.png);
     background-repeat: no-repeat;
@@ -544,10 +627,12 @@
     border-color: transparent;
     background-color: transparent;
 }
-#next:hover{
+
+#next:hover {
     transform: scale(1.1);
 }
-#szovegMezo_cutscene{   
+
+#szovegMezo_cutscene {
     background-image: url(kepek/hatter.png);
     background-size: cover;
     position: absolute;
@@ -558,18 +643,20 @@
     left: 50%;
     transform: translateX(-50%);
 }
-#karakterNev{
-    font-family: "Indie Flower", cursive; 
+
+#karakterNev {
+    font-family: "Indie Flower", cursive;
     text-align: left;
     color: black;
     margin-top: 0px;
-    margin-bottom:0px;
+    margin-bottom: 0px;
     padding-left: 9%;
     font-weight: 700;
     font-size: 40px;
 }
-#KarakterSzoveg{
-    font-family: "Indie Flower", cursive; 
+
+#KarakterSzoveg {
+    font-family: "Indie Flower", cursive;
     text-align: left;
     color: black;
     margin-bottom: 0px;
@@ -579,26 +666,33 @@
     font-weight: 700;
     font-size: 25px;
 }
-#karakter{
+
+#karakter {
     background-image: url(kepek/szog_alszik.png);
     background-size: cover;
     position: absolute;
     aspect-ratio: 1015/400;
     top: 270px;
     height: 450px;
-    right: 8%; 
+    right: 8%;
     transform: rotate(9deg);
     transition: 1s ease;
     animation: fejfaj 1.5s linear infinite alternate;
     transform-origin: bottom center;
 }
+
 @keyframes fejfaj {
-    from { transform:rotate(-0.5deg) }
-    to   { transform:rotate(0.5deg) }
+    from {
+        transform: rotate(-0.5deg)
+    }
+
+    to {
+        transform: rotate(0.5deg)
+    }
 }
 
 
-#karakter2{
+#karakter2 {
     background-image: url(kepek/tuske.png);
     background-size: cover;
     position: absolute;
@@ -612,7 +706,7 @@
 
 
 /*TESZT*/
-#testing{
+#testing {
     background-image: url(kepek/szogkonyha_pixel.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -662,4 +756,3 @@
     height: 860px;
     right: 50%; 
 }*/
-

@@ -219,3 +219,14 @@
         width: 80%;
     }
 }
+
+
+
+
+/* cutscene_1*/
+
+@media (max-width: 800px){
+    #karakter {
+        right: -60%;
+    }
+}
