@@ -121,14 +121,20 @@ async function Mozgas(){
 
       //ulés reszponzivitás
 
-      if(window.innerWidth>=500 && window.innerWidth<=800)
+      if(window.innerWidth>=700 && window.innerWidth<=800)
         {
           szog.style.right="5%"
           
         }
+        else if(window.innerWidth>=500 && window.innerWidth<=700)
+        {
+          szog.style.right="5%"
+          szog.style.top="5%"
+        }
         else{
           szog.style.right="41%";
         }
+        
 
       szog.style.aspectRatio="410/1400";
 
