@@ -13,6 +13,7 @@ const itemmezo = document.getElementById("itemmezo");
 const fade = document.getElementById("fade");
 const tuskefeher = document.getElementById("tuske-feher");
 
+
 let item1 = document.getElementById("item1");
 let item2 = document.getElementById("item2");
 let item3 = document.getElementById("item3");
@@ -448,9 +449,25 @@ function kilakoltatas(dv) {
           fade.classList.add("in");
           await sleep(2000)
           HatterChange(hatter, "kepek/Folytatjuk hatter.png");
-          tuskefeher.style.visibility = "visible";
-          tuskefeher.src = "kepek/folytat.png";
-          tuskefeher.style.opacity = "1";
+          
+            const div = document.createElement("div");
+            div.style.marginTop = "20%";
+            div.style .width = "30%";
+            div.style.position = "fixed";
+            div.style.inset = "0";
+            div.style.background = "black";
+            div.style.display = "flex";
+            div.style.justifyContent = "center";
+            div.style.alignItems = "center";
+            div.style.backgroundRepeat = "no-repeat";
+            div.style.backgroundSize = "contain";
+            div.style.zIndex = "9999";
+            div.style.opacity="1";
+            div.style.backgroundImage = 'url("kepek/folytat.png")';
+            
+            document.body.appendChild(div);
+            
+          
 
 
           hud.style.visibility = "hidden";
@@ -464,10 +481,12 @@ function kilakoltatas(dv) {
           tovabbgomb.style.visibility = "hidden";
           szoveg = "";
           cutszoveg.style.visibility = "hidden";
-
+          
+          fade.classList.add("out");
+          await sleep(2000)
           
           fadeOff();
-          
+          fade.classList.remove("out");
           fade.classList.remove("in");
 
         }
