@@ -113,10 +113,23 @@ async function Mozgas(){
       HatterChange(szog,"kepek/szog_ul.png");
       szog.style.transform = "rotate(0deg)";
       szog.style.transition= "top 0.5s ease";
+
       //szog ul
+
       szog.style.top= "280px";
       szog.style.height= "700px";
-      szog.style.right="41%";
+
+      //ulés reszponzivitás
+
+      if(window.innerWidth>=500 && window.innerWidth<=800)
+        {
+          szog.style.right="5%"
+          
+        }
+        else{
+          szog.style.right="41%";
+        }
+
       szog.style.aspectRatio="410/1400";
 
       HatterChange(hatter, "kepek/szogszoba_reggel_pixel.png");
@@ -127,6 +140,7 @@ async function Mozgas(){
       await sleep(2900)
       HatterChange(hatter,"kepek/buli_pixel.png");
       HatterChange(szog,"kepek/szog.png");
+      
       //szog bulizik
       szog.style.top= "70px";
       szog.style.height= "800px";
