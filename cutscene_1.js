@@ -130,9 +130,12 @@ async function Mozgas(){
       //szog bulizik
       szog.style.top= "70px";
       szog.style.height= "800px";
+
+      //reszponzivitas
       if(window.innerWidth>=500 && window.innerWidth<=800)
       {
-        
+        szog.style.right="-25%";
+        tuske.style.right="25%";
       }
       else{
         szog.style.right="10%";
@@ -149,7 +152,7 @@ async function Mozgas(){
       fade.classList.remove("in");
 
       //buli vege
-/* 
+ 
       szog.style.animation="none"
       await sleep(4000);
       fadeOn();
@@ -216,8 +219,16 @@ async function Mozgas(){
     case 16:
       szog.style.display="none"
       HatterChange(hatter,"kepek/tusketelefon_pixel.png")
+      if(window.innerWidth>=500 && window.innerWidth<=800)
+        {
+          document.getElementById("jatekcut").style.backgroundPositionX="-280px"
+        }
+        else{
+          szog.style.right="10%";
+        }  
       break;
     case 17:
+      document.getElementById("jatekcut").style.backgroundPositionX="auto"
       szog.style.display="block"
       HatterChange(hatter,"kepek/szogfurdoszoba_pixel.png")
       //furdo
@@ -243,7 +254,7 @@ async function Mozgas(){
       fade.classList.add("in");
       await sleep(1500)
       window.location.href = "play.html"
- */  } 
+  } 
 }
 
 
