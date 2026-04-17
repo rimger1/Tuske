@@ -113,10 +113,29 @@ async function Mozgas(){
       HatterChange(szog,"kepek/szog_ul.png");
       szog.style.transform = "rotate(0deg)";
       szog.style.transition= "top 0.5s ease";
+
       //szog ul
+
       szog.style.top= "280px";
       szog.style.height= "700px";
-      szog.style.right="41%";
+
+      //ulés reszponzivitás
+
+      if(window.innerWidth>=700 && window.innerWidth<=800)
+        {
+          szog.style.right="5%"
+          
+        }
+        else if(window.innerWidth>=500 && window.innerWidth<=700)
+        {
+          szog.style.right="5%"
+          szog.style.top="5%"
+        }
+        else{
+          szog.style.right="41%";
+        }
+        
+
       szog.style.aspectRatio="410/1400";
 
       HatterChange(hatter, "kepek/szogszoba_reggel_pixel.png");
@@ -127,10 +146,20 @@ async function Mozgas(){
       await sleep(2900)
       HatterChange(hatter,"kepek/buli_pixel.png");
       HatterChange(szog,"kepek/szog.png");
+      
       //szog bulizik
       szog.style.top= "70px";
       szog.style.height= "800px";
-      szog.style.right="10%";
+
+      //reszponzivitas
+      if(window.innerWidth>=500 && window.innerWidth<=800)
+      {
+        szog.style.right="-25%";
+        tuske.style.right="25%";
+      }
+      else{
+        szog.style.right="10%";
+      }
       szog.style.aspectRatio="1/1";
       
       fade.classList.add("out");
@@ -143,7 +172,7 @@ async function Mozgas(){
       fade.classList.remove("in");
 
       //buli vege
-
+ 
       szog.style.animation="none"
       await sleep(4000);
       fadeOn();
@@ -210,8 +239,16 @@ async function Mozgas(){
     case 16:
       szog.style.display="none"
       HatterChange(hatter,"kepek/tusketelefon_pixel.png")
+      if(window.innerWidth>=500 && window.innerWidth<=800)
+        {
+          document.getElementById("jatekcut").style.backgroundPositionX="-280px"
+        }
+        else{
+          szog.style.right="10%";
+        }  
       break;
     case 17:
+      document.getElementById("jatekcut").style.backgroundPositionX="auto"
       szog.style.display="block"
       HatterChange(hatter,"kepek/szogfurdoszoba_pixel.png")
       //furdo
