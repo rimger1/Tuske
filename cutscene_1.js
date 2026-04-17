@@ -130,7 +130,13 @@ async function Mozgas(){
       //szog bulizik
       szog.style.top= "70px";
       szog.style.height= "800px";
-      szog.style.right="10%";
+      if(window.innerWidth>=500 && window.innerWidth<=800)
+      {
+        
+      }
+      else{
+        szog.style.right="10%";
+      }
       szog.style.aspectRatio="1/1";
       
       fade.classList.add("out");
