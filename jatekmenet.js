@@ -444,17 +444,25 @@ function kilakoltatas(dv) {
           szoveg = "+ Van benne egy cetli +Ejha, de még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if (dialogvegeCount === 9) {
-          fadeOn();
+            fadeOn();
+            fade.classList.add("in");
+            await sleep(2000); 
+           
+            HatterChange(hatter, "kepek/Folytatjuk hatter.png");
 
-          fade.classList.add("in");
-          await sleep(2000)
-          HatterChange(hatter, "kepek/Folytatjuk hatter.png");
+            
           
+
+           
             const div = document.createElement("div");
-            div.style.marginTop = "20%";
-            div.style .width = "30%";
+            div.style.margin = "auto";
+            div.style.width = "30%";
+            div.style.height = "30%";
             div.style.position = "fixed";
-            div.style.inset = "0";
+            div.style.top = "0";
+            div.style.left = "0";
+            div.style.right = "0";
+            div.style.bottom = "0";
             div.style.background = "black";
             div.style.display = "flex";
             div.style.justifyContent = "center";
@@ -462,32 +470,30 @@ function kilakoltatas(dv) {
             div.style.backgroundRepeat = "no-repeat";
             div.style.backgroundSize = "contain";
             div.style.zIndex = "9999";
-            div.style.opacity="1";
+            div.style.opacity = "1";
             div.style.backgroundImage = 'url("kepek/folytat.png")';
-            
+
             document.body.appendChild(div);
-            
-          
+            fade.appendChild(div);
 
+          
+            hud.style.visibility = "hidden";
+            element1.style.visibility = "hidden";
+            element2.style.visibility = "hidden";
+            itemmezo.style.visibility = "hidden";
+            item1.style.visibility = "hidden";
+            item2.style.visibility = "hidden";
+            item3.style.visibility = "hidden";
+            hatter.style.backgroundPositionY = "0px";
+            tovabbgomb.style.visibility = "hidden";
+            szoveg = "";
+            cutszoveg.style.visibility = "hidden";
 
-          hud.style.visibility = "hidden";
-          element1.style.visibility = "hidden";
-          element2.style.visibility = "hidden";
-          itemmezo.style.visibility = "hidden";
-          item1.style.visibility = "hidden";
-          item2.style.visibility = "hidden";
-          item3.style.visibility = "hidden";
-          hatter.style.backgroundPositionY = "0px"
-          tovabbgomb.style.visibility = "hidden";
-          szoveg = "";
-          cutszoveg.style.visibility = "hidden";
-          
-          fade.classList.add("out");
-          await sleep(2000)
-          
-          fadeOff();
-          fade.classList.remove("out");
-          fade.classList.remove("in");
+            fade.classList.add("out");
+            await sleep(2000);
+            fadeOff();
+            fade.classList.remove("out");
+            fade.classList.remove("in");
 
         }
 
