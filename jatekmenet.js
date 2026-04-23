@@ -447,6 +447,7 @@ function kilakoltatas(dv) {
             fadeOn();
             fade.classList.add("in");
             await sleep(2000); 
+            fade.classList.add("in");
            
             HatterChange(hatter, "kepek/Folytatjuk hatter.png");
 
@@ -473,7 +474,7 @@ function kilakoltatas(dv) {
             div.style.opacity = "1";
             div.style.backgroundImage = 'url("kepek/folytat.png")';
 
-            document.body.appendChild(div);
+            
             fade.appendChild(div);
 
           
@@ -489,8 +490,9 @@ function kilakoltatas(dv) {
             szoveg = "";
             cutszoveg.style.visibility = "hidden";
 
-            fade.classList.add("out");
+            fade.classList.add("in");
             await sleep(2000);
+            fade.classList.add("out");
             fadeOff();
             fade.classList.remove("out");
             fade.classList.remove("in");
