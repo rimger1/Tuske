@@ -14,6 +14,7 @@ const fade = document.getElementById("fade");
 const tuskefeher = document.getElementById("tuske-feher");
 
 
+
 let item1 = document.getElementById("item1");
 let item2 = document.getElementById("item2");
 let item3 = document.getElementById("item3");
@@ -451,31 +452,22 @@ function kilakoltatas(dv) {
            
             HatterChange(hatter, "kepek/Folytatjuk hatter.png");
 
-            
+            const intro = document.getElementById("intro");
+          //fadekakinál minden elem eltűnik, kivéve a háttér, ami megváltozik, és a fade effekt megy tovább
+          
+          intro.classList.remove("fade-out");
+          intro.style.zIndex = "9999";
+          intro.classList.add("fade-in");
+          
+          tuskefeher.src = "kepek/folytat.png";
           
 
-           
-            const div = document.createElement("div");
-            div.style.margin = "auto";
-            div.style.width = "30%";
-            div.style.height = "30%";
-            div.style.position = "fixed";
-            div.style.top = "0";
-            div.style.left = "0";
-            div.style.right = "0";
-            div.style.bottom = "0";
-            div.style.background = "black";
-            div.style.display = "flex";
-            div.style.justifyContent = "center";
-            div.style.alignItems = "center";
-            div.style.backgroundRepeat = "no-repeat";
-            div.style.backgroundSize = "contain";
-            div.style.zIndex = "9999";
-            div.style.opacity = "1";
-            div.style.backgroundImage = 'url("kepek/folytat.png")';
-
+          
             
-            fade.appendChild(div);
+          
+           
+      
+           
 
           
             hud.style.visibility = "hidden";
