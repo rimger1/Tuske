@@ -644,6 +644,22 @@
     transform: scale(1.1);
 }
 
+#newDiv{
+    position: absolute;
+bottom: 60%;
+left: 50%;
+transform: translateX(-50%);
+width: 20%;
+height: 60px;
+background-image: url('kepek/Vissza a fomenube gomb.png');
+background-size: cover;
+background-position: center;
+}
+#newDiv:hover {
+    width: 22%;
+    height: 66px;
+    transition: 0.3s ease;
+}
 
 #szovegMezo_cutscene {
     background-image: url(kepek/hatter.png);
