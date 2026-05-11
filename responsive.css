@@ -230,3 +230,15 @@
         right: -60%;
     }
 }
+
+@media (max-width: 500px){
+    #karakter{
+        height: 300px;
+        right: -110%;
+    }
+
+    #karakterNev {
+        font-size: 30px;
+    }
+
+}

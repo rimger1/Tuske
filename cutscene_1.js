@@ -19,6 +19,9 @@ let waitmax=60    //100
 
 szog.style.animation="none"
 
+if(window.innerWidth<500){
+  szovegTx.style.fontSize="17px"
+}
 /*fade levetele*/
 setTimeout(fadeOff, 2500);
 
@@ -87,18 +90,38 @@ async function Tanc(){
       {
         szog.style.transition= "top 0.8s ease"
         szog.style.top= "230px"
+        if(window.innerWidth>=350 && window.innerWidth<=500)
+        {
+          szog.style.top="400px"
+        }
+
 
         tuske.style.transition= "top 0.4s ease"
         tuske.style.top= "180px"
+        if(window.innerWidth>=350 && window.innerWidth<=500)
+          {
+            tuske.style.top="400px"
+          }
+  
         await sleep(200);
       }
       else
       {
         szog.style.transition= "top 0.8s ease"
         szog.style.top= "0px"
+        if(window.innerWidth>=350 && window.innerWidth<=500)
+          {
+            szog.style.top="230px"
+          }
+  
 
         tuske.style.transition= "top 0.4s ease"
         tuske.style.top= "20px"
+        if(window.innerWidth>=350 && window.innerWidth<=500)
+          {
+            tuske.style.top="250px"
+          }
+  
         await sleep(200);    
       }
     }
@@ -131,6 +154,10 @@ async function Mozgas(){
           szog.style.right="5%"
           szog.style.top="5%"
         }
+        else if(window.innerWidth>=350 && window.innerWidth<=500)
+        {
+          szog.style.right="25%"
+        }
         else{
           szog.style.right="41%";
         }
@@ -156,6 +183,12 @@ async function Mozgas(){
       {
         szog.style.right="-25%";
         tuske.style.right="25%";
+      }
+      else if(window.innerWidth>=350 && window.innerWidth<=500)
+      {
+        tuske.style.height="500px"
+        tuske.style.right="0%"
+
       }
       else{
         szog.style.right="10%";
