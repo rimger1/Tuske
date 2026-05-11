@@ -420,6 +420,14 @@
     left: 50%;
     transform: translateX(-50%);
 }
+@media screen and (max-width: 800px) {
+    #szovegMezo {
+        width: 100%;
+    }
+    
+    }
+    
+
 
 #karakterNev {
     font-family: "Indie Flower", cursive;

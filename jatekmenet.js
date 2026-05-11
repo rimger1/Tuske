@@ -31,6 +31,94 @@ let waitmin = 15;
 let waitmax = 40;
 //15
 //40
+function updateCharacterPositions() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 800) {
+    element1.style.left = "-30%";
+    element1.style.height = "660px";
+    element1.style.top = "120px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "0%";
+    element2.style.height = "660px";
+    element2.style.top = "198px";
+    element2.style.position = "absolute";
+    element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  } else if (screenWidth <= 1200) {
+    element1.style.left = "10%";
+    element1.style.height = "600px";
+    element1.style.top = "150px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "10%";
+    element2.style.height = "710px";
+    element2.style.top = "198px";
+    element2.style.position = "absolute";
+    element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  } else {
+    element1.style.left = "15%";
+    element1.style.height = "660px";
+    element1.style.top = "120px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "15%";
+    element2.style.height = "710px";
+    element2.style.top = "198px";
+    element2.style.position = "absolute";
+    element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  }
+}
+function updateCharacterPositionsOreg() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 800) {
+    element1.style.left = "-28%";
+    element1.style.height = "550px";
+    element1.style.top = "180px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "19%";
+    element2.style.height = "660px";
+    element2.style.top = "160px";
+    element2.style.position = "absolute";
+  element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  } else if (screenWidth <= 1200) {
+    element1.style.left = "10%";
+    element1.style.height = "550px";
+    element1.style.top = "180px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "25%";
+    element2.style.height = "660px";
+    element2.style.top = "130px";
+    element2.style.position = "absolute";
+  element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  } else {
+    element1.style.left = "15%";
+    element1.style.height = "550px";
+    element1.style.top = "180px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "25%";
+    element2.style.height = "660px";
+    element2.style.top = "130px";
+    element2.style.position = "absolute";
+  element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  }
+}
+
+
+window.addEventListener("resize", updateCharacterPositions);
+window.addEventListener("resize", updateCharacterPositionsOreg);
+
+updateCharacterPositions();
 
 
 
@@ -38,9 +126,11 @@ function balkarakterbeszel() {
   const element1 = document.getElementById("balKarakter");
   element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+  
   element1.style.left = "10%";
   element1.style.height = "660px";
   element1.style.top = "120px";
+ 
 
   const element2 = document.getElementById("jobbKarakter");
   element2.style.position = "absolute";
@@ -130,27 +220,27 @@ function valasztas() {
 
   valaszto.style.visibility = "visible";
   tovabbgomb.style.visibility = "hidden";
-  balkarakterbeszel();
+  updateCharacterPositions();
 }
 
 function elsova() {
   storytelling();
   Kiir(cutszoveg);
-  jobbkarkterbeszel();
+  updateCharacterPositionsOreg();
   console.log("Első választási lehetőség kiválasztva.");
 }
 
 function masodikva() {
   storytelling();
   Kiir(cutszoveg);
-  jobbkarkterbeszel();
+  updateCharacterPositionsOreg();
   console.log("Második választási lehetőség kiválasztva.");
 }
 
 function harmadikva() {
   storytelling();
   Kiir(cutszoveg);
-  jobbkarkterbeszel();
+  updateCharacterPositionsOreg();
   console.log("Harmadik választási lehetőség kiválasztva.");
 }
 
@@ -177,7 +267,7 @@ function kilakoltatas(dv) {
   szoveg = "Remélem be tudok jutni valahogy... +Csak nem alszik még mindig...";
   hatter.style.backgroundImage = `url("kepek/tuskekilakoltatas.png")`;
   storytelling();
-  balkarakterbeszel();
+  updateCharacterPositions();
   element2.style.position = "absolute";
   element2.style.visibility = "hidden";
   element2.style.right = "-10%";
@@ -230,7 +320,7 @@ function kilakoltatas(dv) {
             tovabbgomb.style.visibility = "visible";
 
 
-            jobbkarkterbeszel();
+            updateCharacterPositionsOreg();
 
             console.log("Első választási lehetőség kiválasztva.");
           }
@@ -261,7 +351,7 @@ function kilakoltatas(dv) {
         }
         else if (dialogvegeCount === 3) {
           dialogvege = false;
-          balkarakterbeszel();
+          updateCharacterPositions();
           tovabbg();
           storytelling();
           karakternev.innerHTML = "Szög";
@@ -272,7 +362,7 @@ function kilakoltatas(dv) {
         }
         else if (dialogvegeCount === 4) {
           storytelling();
-          jobbkarkterbeszel();
+          updateCharacterPositionsOreg();
           dialogvege = false;
           tovabbg();
           karakternev.innerHTML = "Tulaj";
@@ -283,7 +373,7 @@ function kilakoltatas(dv) {
         }
         else if (dialogvegeCount === 5) {
           storytelling();
-          balkarakterbeszel();
+         updateCharacterPositions();
           dialogvege = false;
           tovabbg();
           element2.style.position = "absolute";
@@ -291,8 +381,8 @@ function kilakoltatas(dv) {
           element2.style.transform = "scaleX(-1)";
 
           element2.style.transition = "0.6s ease"
-          element2.style.transition = "right 1s ease, top 0.8s ease, height 0.7s ease";
-          element2.style.right = "-20%";
+          element2.style.transition = "right 3s ease, top 0.8s ease, height 0.7s ease";
+          element2.style.right = "-50%";
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
@@ -304,7 +394,7 @@ function kilakoltatas(dv) {
           fade.classList.add("in");
           await sleep(2000)
           storytelling();
-          balkarakterbeszel();
+          updateCharacterPositions();
           dialogvege = false;
           tovabbg();
 
@@ -327,7 +417,7 @@ function kilakoltatas(dv) {
         else if (dialogvegeCount === 7) {
           fadeOn();
           storytelling();
-          balkarakterbeszel();
+          updateCharacterPositions();
           dialogvege = false;
           tovabbg();
           fade.classList.add("in");
@@ -356,7 +446,7 @@ function kilakoltatas(dv) {
         else if (dialogvegeCount === 8) {
           fadeOn();
           storytelling();
-          balkarakterbeszel();
+          updateCharacterPositions();
           dialogvege = false;
           tovabbg();
 
@@ -436,7 +526,7 @@ function kilakoltatas(dv) {
           element2.style.visibility = "visible";
           element2.style.right = "14%";
           element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
-          jobbkarkterbeszel();
+         updateCharacterPositionsOreg();
           dialogvege = false;
           karakternev.innerHTML = "Tulaj";
           cutszoveg.innerHTML = "";
