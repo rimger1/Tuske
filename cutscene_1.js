@@ -189,6 +189,8 @@ async function Mozgas(){
         tuske.style.height="500px"
         tuske.style.right="0%"
 
+        szog.style.height="500px"
+        szog.style.right="-50%"
       }
       else{
         szog.style.right="10%";
@@ -291,6 +293,12 @@ async function Mozgas(){
       szog.style.height="1500px"
       szog.style.right="77%"
       szog.style.transform="scaleX(-1)"
+      if(window.innerWidth>=350 && window.innerWidth<=500)
+        {
+          szog.style.right="60%"
+          szog.style.top="300px"
+          szog.style.height="900px"
+        }
       break;
     case 18:
       HatterChange(hatter,"kepek/szogfolyoso_pixel.png")
