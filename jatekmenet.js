@@ -12,6 +12,8 @@ const hud = document.getElementById("szovegMezo");
 const itemmezo = document.getElementById("itemmezo");
 const fade = document.getElementById("fade");
 const tuskefeher = document.getElementById("tuske-feher");
+const newDiv = document.getElementById("newDiv");
+newDiv.style.visibility = "hidden";
 
 
 
@@ -25,8 +27,8 @@ itemmezo.style.visibility = "hidden"
 item.style.visibility = "hidden";
 let hovakattint = 0;
 
-let waitmin = 1;
-let waitmax = 1;
+let waitmin = 15;
+let waitmax = 40;
 //15
 //40
 
@@ -152,67 +154,6 @@ function harmadikva() {
   console.log("Harmadik választási lehetőség kiválasztva.");
 }
 
-// const fadeElements = [
-//   element1,
-//   element2,
-//   elsoValaszthato,
-//   masodikValaszthato,
-//   harmadikValaszthato,
-//   karakternev,
-//   cutszoveg,
-//   tovabbgomb,
-//   valaszto,
-//   item,
-//   hud,
-//   itemmezo,
-//   item1,
-//   item2,
-//   item3
-// ];
-
-// function setFade(opacity) {
-//   fadeElements.forEach(el => {
-//     el.style.transition = "opacity 1s";
-//     el.style.opacity = opacity;
-//   });
-// }
-
-// function fadeChangeBackground(kep) {
-//   let fade = document.createElement("div");
-
-//   fade.style.position = "fixed";
-//   fade.style.top = "0";
-//   fade.style.left = "0";
-//   fade.style.width = "100%";
-//   fade.style.height = "100%";
-//   fade.style.background = "black";
-//   fade.style.opacity = "0";
-//   fade.style.transition = "opacity 1s";
-//   fade.style.pointerEvents = "none";
-//   fade.style.zIndex = "9999";
-
-//   document.body.appendChild(fade);
-
-//   setTimeout(() => {
-//     fade.style.opacity = "1";
-//     setFade("0");
-//   }, 10);
-
-//   setTimeout(() => {
-//     HatterChange(hatter, kep);
-//     hatter.style.backgroundPosition = "0,0";
-//   }, 1000);
-
-//   setTimeout(() => {
-//     fade.style.opacity = "0";
-//     setFade("1");
-//   }, 1100);
-
-//   setTimeout(() => {
-//     fade.remove();
-//   }, 2100);
-// }
-
 function HatterChange(valto, kep) {
   valto.style.backgroundImage = `url("${kep}")`;
 }
@@ -295,7 +236,7 @@ function kilakoltatas(dv) {
           }
           function kilakoltatasdatum() {
             dialogvege = false;
-            szoveg = "+ Hát öcsém két hete délután volt rá időm és energiám. +Kedvem sincs az ilyenekkel foglalkozni. +Felszívódott. + Lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a gyreket, égett a pofám... +Mit képzel az ilyen? +Aztán meg kérdik tőlem az emberek, hogy miért veszekedek az asszonnyal ennyit... +Mert ők mit csinálnának? +Nem? +... +De mindegy a végén mégis én jártam jól, mi? +Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van, az meg az ő baja. + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
+            szoveg = "+ Hát öcsém két hete délután volt rá időm és energiám. +Kedvem sincs az ilyenekkel foglalkozni. +Felszívódott. + Lakatost kellett hívnom az ajtóhoz, a Ferkót, hogy bejussak. +Azt hittem megölöm azt a gyereket, égett a pofám... +Mit képzel az ilyen? +Aztán meg kérdik tőlem az emberek, hogy miért veszekedek az asszonnyal ennyit... +Mert ők mit csinálnának? +Nem? +... +De mindegy a végén mégis én jártam jól, mi? +Hehe... +Legalább nem kell elviselnem. +Az hogy most hol van, az meg az ő baja. + *Sóhajt* + Ezek a mai fiatalok nincsenek tekintettel semmire... +Annyit tudok mondani, hogy talán még a postaládájában találsz valamit, mert sosem vett ki belőle semmit. + Az újságait is nekem kellett kidobálni a földről...";
             tovabbg();
             storytelling();
             karakternev.innerHTML = "Tulaj";
@@ -445,22 +386,10 @@ function kilakoltatas(dv) {
           szoveg = "+ Van benne egy cetli +Ejha, de még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if (dialogvegeCount === 9) {
-          const newDiv = document.createElement("div");
-            newDiv.style.position = "absolute";
-            newDiv.style.bottom = "20%";
-            newDiv.style.left = "50%";
-            newDiv.style.transform = "translateX(-50%)";
-            newDiv.style.width = "20%";
-            newDiv.style.height = "60px";
-            newDiv.style.backgroundImage = "url('kepek/Vissza a fomenube gomb.png')";
-            newDiv.style.backgroundSize = "cover";
-            newDiv.style.backgroundPosition = "center";
-            document.body.appendChild(newDiv);
-            newDiv.style.visibility = "hidden";
-            newDiv.addEventListener("pointerover", () => {
-              newDiv.style.transform = "scale(1.1)";
-              newDiv.style.transition = "transform 0.3s ease";
-            });
+          
+           
+            
+           
             newDiv.addEventListener("click", () => {
               window.location.href = "index.html";
             });

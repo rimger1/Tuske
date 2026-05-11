@@ -318,11 +318,12 @@
 #jatektest {
     background-image: url(kepek/idogephaz_reggel_pixel.png);
     background-repeat: no-repeat;
-    height: 98vh;
-    bottom: 0;
+    
+    background-position: center;
     background-size: cover;
-    background-position: 0px -200px;
+   
     overflow: hidden;
+    background-attachment: fixed;
 }
 
 #itemmezo {
@@ -644,6 +645,22 @@
     transform: scale(1.1);
 }
 
+#newDiv{
+    position: absolute;
+bottom: 60%;
+left: 50%;
+transform: translateX(-50%);
+width: 20%;
+height: 60px;
+background-image: url('kepek/Vissza a fomenube gomb.png');
+background-size: cover;
+background-position: center;
+}
+#newDiv:hover {
+    width: 22%;
+    height: 66px;
+    transition: 0.3s ease;
+}
 
 #szovegMezo_cutscene {
     background-image: url(kepek/hatter.png);
