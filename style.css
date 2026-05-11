@@ -318,11 +318,12 @@
 #jatektest {
     background-image: url(kepek/idogephaz_reggel_pixel.png);
     background-repeat: no-repeat;
-    height: 98vh;
-    bottom: 0;
+    
+    background-position: center;
     background-size: cover;
-    background-position: 0px -200px;
+   
     overflow: hidden;
+    background-attachment: fixed;
 }
 
 #itemmezo {
