@@ -445,31 +445,38 @@ function kilakoltatas(dv) {
           szoveg = "+ Van benne egy cetli +Ejha, de még milyen... + Málik szét a kezemben olyan régi. + Ez egy cím. + Utca és házszám... + Érdekes... + Lehet elnézek arra... + Hátha ott van a csávó...";
         }
         else if (dialogvegeCount === 9) {
+          const newDiv = document.createElement("div");
+            newDiv.style.position = "absolute";
+            newDiv.style.bottom = "20%";
+            newDiv.style.left = "50%";
+            newDiv.style.transform = "translateX(-50%)";
+            newDiv.style.width = "20%";
+            newDiv.style.height = "60px";
+            newDiv.style.backgroundImage = "url('kepek/Vissza a fomenube gomb.png')";
+            newDiv.style.backgroundSize = "cover";
+            newDiv.style.backgroundPosition = "center";
+            document.body.appendChild(newDiv);
+            newDiv.style.visibility = "hidden";
+            newDiv.addEventListener("pointerover", () => {
+              newDiv.style.transform = "scale(1.1)";
+              newDiv.style.transition = "transform 0.3s ease";
+            });
+            newDiv.addEventListener("click", () => {
+              window.location.href = "index.html";
+            });
             fadeOn();
+            
             fade.classList.add("in");
             await sleep(2000); 
-            fade.classList.add("in");
-           
+            fade.classList.add("out");
             HatterChange(hatter, "kepek/Folytatjuk hatter.png");
-
             const intro = document.getElementById("intro");
-          //fadekakinál minden elem eltűnik, kivéve a háttér, ami megváltozik, és a fade effekt megy tovább
-          
           intro.classList.remove("fade-out");
           intro.style.zIndex = "9999";
           intro.classList.add("fade-in");
           
           tuskefeher.src = "kepek/folytat.png";
-          
 
-          
-            
-          
-           
-      
-           
-
-          
             hud.style.visibility = "hidden";
             element1.style.visibility = "hidden";
             element2.style.visibility = "hidden";
@@ -481,8 +488,11 @@ function kilakoltatas(dv) {
             tovabbgomb.style.visibility = "hidden";
             szoveg = "";
             cutszoveg.style.visibility = "hidden";
+            
 
             fade.classList.add("in");
+            newDiv.style.visibility = "visible";
+            
             await sleep(2000);
             fade.classList.add("out");
             fadeOff();
