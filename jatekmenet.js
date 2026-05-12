@@ -32,7 +32,54 @@ let waitmax = 40;
 //15
 //40
 updateCharacterPositions();
+textreszponziv();
 
+function textreszponziv() {
+  const screenWidth = window.innerWidth;
+ if (screenWidth <= 390) {
+    cutszoveg.style.fontSize = "15px";
+    tuskefeher.style.width = "300px";
+    karakternev.style.fontSize = "25px";
+    elsoValaszthato.style.fontSize = "15px";
+    masodikValaszthato.style.fontSize = "15px";
+    harmadikValaszthato.style.fontSize = "15px";
+    valaszto.style.right = "5%";
+  }
+  else if (screenWidth <= 500) {
+    cutszoveg.style.fontSize = "18px";
+    tuskefeher.style.width = "450px";
+    karakternev.style.fontSize = "28px";
+    elsoValaszthato.style.fontSize = "18px";
+    masodikValaszthato.style.fontSize = "18px";
+    harmadikValaszthato.style.fontSize = "18px";
+    valaszto.style.right = "10%";
+  } else if (screenWidth <= 800) {
+    cutszoveg.style.fontSize = "20px";
+    tuskefeher.style.width = "580px";
+    karakternev.style.fontSize = "32px";
+    elsoValaszthato.style.fontSize = "20px";
+    masodikValaszthato.style.fontSize = "20px";
+    harmadikValaszthato.style.fontSize = "20px";
+    valaszto.style.right = "20%";
+  } else if (screenWidth <= 1200) {
+    cutszoveg.style.fontSize = "22px";
+    tuskefeher.style.width = "850px";
+    karakternev.style.fontSize = "37px";
+    elsoValaszthato.style.fontSize = "22px";
+    masodikValaszthato.style.fontSize = "22px";
+    harmadikValaszthato.style.fontSize = "22px";
+    valaszto.style.right = "34%";
+  } else {
+    cutszoveg.style.fontSize = "25px";
+    tuskefeher.style.width = "1000px";
+    karakternev.style.fontSize = "40px";
+    elsoValaszthato.style.fontSize = "25px";
+    masodikValaszthato.style.fontSize = "25px";
+    harmadikValaszthato.style.fontSize = "25px";
+    valaszto.style.right = "50%";
+  }
+}
+window.addEventListener("resize", textreszponziv);
 
 function updateCharacterPositions() {
   const screenWidth = window.innerWidth;
