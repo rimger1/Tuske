@@ -204,7 +204,7 @@ element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";}
 
 
 window.addEventListener("resize", updateCharacterPositions);
-window.addEventListener("resize", updateCharacterPositionsOreg);
+
 
 
 
