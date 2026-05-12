@@ -31,22 +31,37 @@ let waitmin = 15;
 let waitmax = 40;
 //15
 //40
+updateCharacterPositions();
+
+
 function updateCharacterPositions() {
   const screenWidth = window.innerWidth;
 
   if (screenWidth <= 800) {
     element1.style.left = "-30%";
-    element1.style.height = "660px";
+    element1.style.height = "600px";
     element1.style.top = "120px";
     element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
 
     element2.style.right = "0%";
-    element2.style.height = "660px";
+    element2.style.height = "710px";
     element2.style.top = "198px";
     element2.style.position = "absolute";
     element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
-  } else if (screenWidth <= 1200) {
+  } 
+  else if (screenWidth <= 1000) {
+    element1.style.left = "-20%";
+    element1.style.height = "600px";
+    element1.style.top = "120px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+  element2.style.right = "0%";
+    element2.style.height = "710px";
+    element2.style.top = "198px";
+    element2.style.position = "absolute";
+    element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";}
+  else if (screenWidth <= 1200) {
     element1.style.left = "10%";
     element1.style.height = "600px";
     element1.style.top = "150px";
@@ -65,8 +80,8 @@ function updateCharacterPositions() {
     element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
 
-    element2.style.right = "15%";
-    element2.style.height = "710px";
+    element2.style.right = "13%";
+    element2.style.height = "720px";
     element2.style.top = "198px";
     element2.style.position = "absolute";
     element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
@@ -75,19 +90,45 @@ function updateCharacterPositions() {
 function updateCharacterPositionsOreg() {
   const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 800) {
-    element1.style.left = "-28%";
+  if (screenWidth <= 500) {
+    element1.style.left = "-40%";
+    element1.style.height = "550px";
+    element1.style.top = "180px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "16%";
+    element2.style.height = "800px";
+    element2.style.top = "130px";
+    element2.style.position = "absolute";
+  element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  }
+
+  else if (screenWidth <= 800) {
+    element1.style.left = "-30%";
     element1.style.height = "550px";
     element1.style.top = "180px";
     element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
 
     element2.style.right = "19%";
-    element2.style.height = "660px";
-    element2.style.top = "160px";
+    element2.style.height = "800px";
+    element2.style.top = "130px";
     element2.style.position = "absolute";
   element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
-  } else if (screenWidth <= 1200) {
+  }
+  else if (screenWidth <= 1000) {
+    element1.style.left = "-15%";
+    element1.style.height = "550px";
+    element1.style.top = "180px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+  element2.style.right = "20%";
+  element2.style.height = "800px";
+  element2.style.top = "130px";
+  element2.style.position = "absolute";
+element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";}
+  else if (screenWidth <= 1200) {
     element1.style.left = "10%";
     element1.style.height = "550px";
     element1.style.top = "180px";
@@ -95,7 +136,7 @@ function updateCharacterPositionsOreg() {
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
 
     element2.style.right = "25%";
-    element2.style.height = "660px";
+    element2.style.height = "800px";
     element2.style.top = "130px";
     element2.style.position = "absolute";
   element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
@@ -106,8 +147,8 @@ function updateCharacterPositionsOreg() {
     element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
 
-    element2.style.right = "25%";
-    element2.style.height = "660px";
+    element2.style.right = "35%";
+    element2.style.height = "800px";
     element2.style.top = "130px";
     element2.style.position = "absolute";
   element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
@@ -118,7 +159,6 @@ function updateCharacterPositionsOreg() {
 window.addEventListener("resize", updateCharacterPositions);
 window.addEventListener("resize", updateCharacterPositionsOreg);
 
-updateCharacterPositions();
 
 
 
@@ -270,7 +310,7 @@ function kilakoltatas(dv) {
   updateCharacterPositions();
   element2.style.position = "absolute";
   element2.style.visibility = "hidden";
-  element2.style.right = "-10%";
+  element2.style.right = "-70%";
   console.log("kilakoltatas: " + dv);
 
   const waitForDialogvege = new Promise((resolve) => {
@@ -523,10 +563,10 @@ function kilakoltatas(dv) {
 
 
         else {
+          
           element2.style.visibility = "visible";
-          element2.style.right = "14%";
-          element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
-         updateCharacterPositionsOreg();
+          element2.style.transition = "right 1s ease, top 0.2s ease, height 0.2s ease";
+          updateCharacterPositionsOreg();
           dialogvege = false;
           karakternev.innerHTML = "Tulaj";
           cutszoveg.innerHTML = "";
