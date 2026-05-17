@@ -669,6 +669,58 @@ background-position: center;
     height: 66px;
     transition: 0.3s ease;
 }
+@media (max-width: 500px ) {
+    #newDiv {
+        bottom: 140%;
+        width: 50%;
+        height: 30px;
+    }
+    #newDiv:hover {
+        bottom: 140%;
+        width: 53%;
+        height: 33px;
+    }
+    
+}
+@media (  min-width: 500px) {
+    #newDiv {
+        bottom: 100%;
+        width: 50%;
+        height: 40px;
+    }
+    #newDiv:hover {
+        bottom: 100%;
+        width: 53%;
+        height: 43px;
+    }
+    
+}
+@media (  min-width: 780px) {
+    #newDiv {
+        bottom: 90%;
+        width: 60%;
+        height: 60px;
+    }
+    #newDiv:hover {
+        bottom: 90%;
+        width: 63%;
+        height: 63px;
+    }
+    
+}
+@media (  min-width: 1000px) {
+    #newDiv {
+        bottom: 90%;
+        width: 45%;
+        height: 60px;
+    }
+    #newDiv:hover {
+        bottom: 90%;
+        width: 48%;
+        height: 63px;
+    }
+    
+}
 
 #szovegMezo_cutscene {
     background-image: url(kepek/hatter.png);

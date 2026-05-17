@@ -14,7 +14,7 @@ const fade = document.getElementById("fade");
 const tuskefeher = document.getElementById("tuske-feher");
 const newDiv = document.getElementById("newDiv");
 newDiv.style.visibility = "hidden";
-
+let szogvoreg=0;
 
 
 let item1 = document.getElementById("item1");
@@ -27,8 +27,8 @@ itemmezo.style.visibility = "hidden"
 item.style.visibility = "hidden";
 let hovakattint = 0;
 
-let waitmin = 15;
-let waitmax = 40;
+let waitmin = 1;
+let waitmax = 1;
 //15
 //40
 updateCharacterPositions();
@@ -47,7 +47,7 @@ function textreszponziv() {
   }
   else if (screenWidth <= 500) {
     cutszoveg.style.fontSize = "18px";
-    tuskefeher.style.width = "450px";
+    tuskefeher.style.width = "390px";
     karakternev.style.fontSize = "28px";
     elsoValaszthato.style.fontSize = "18px";
     masodikValaszthato.style.fontSize = "18px";
@@ -55,7 +55,7 @@ function textreszponziv() {
     valaszto.style.right = "10%";
   } else if (screenWidth <= 800) {
     cutszoveg.style.fontSize = "20px";
-    tuskefeher.style.width = "580px";
+    tuskefeher.style.width = "500px";
     karakternev.style.fontSize = "32px";
     elsoValaszthato.style.fontSize = "20px";
     masodikValaszthato.style.fontSize = "20px";
@@ -63,7 +63,7 @@ function textreszponziv() {
     valaszto.style.right = "20%";
   } else if (screenWidth <= 1200) {
     cutszoveg.style.fontSize = "22px";
-    tuskefeher.style.width = "850px";
+    tuskefeher.style.width = "800px";
     karakternev.style.fontSize = "37px";
     elsoValaszthato.style.fontSize = "22px";
     masodikValaszthato.style.fontSize = "22px";
@@ -71,7 +71,7 @@ function textreszponziv() {
     valaszto.style.right = "34%";
   } else {
     cutszoveg.style.fontSize = "25px";
-    tuskefeher.style.width = "1000px";
+    tuskefeher.style.width = "990px";
     karakternev.style.fontSize = "40px";
     elsoValaszthato.style.fontSize = "25px";
     masodikValaszthato.style.fontSize = "25px";
@@ -84,7 +84,21 @@ window.addEventListener("resize", textreszponziv);
 function updateCharacterPositions() {
   const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 800) {
+  if (screenWidth <= 500) {
+    element1.style.left = "-190px";
+    element1.style.height = "520px";
+    element1.style.top = "230px";
+    element1.style.position = "absolute";
+  element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
+
+    element2.style.right = "-3%";
+    element2.style.height = "540px";
+    element2.style.top = "280px";
+    element2.style.position = "absolute";
+    element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
+  } 
+
+ else if (screenWidth <= 800) {
     element1.style.left = "-30%";
     element1.style.height = "600px";
     element1.style.top = "120px";
@@ -103,7 +117,7 @@ function updateCharacterPositions() {
     element1.style.top = "120px";
     element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
-  element2.style.right = "0%";
+  element2.style.right = "9%";
     element2.style.height = "710px";
     element2.style.top = "198px";
     element2.style.position = "absolute";
@@ -138,15 +152,15 @@ function updateCharacterPositionsOreg() {
   const screenWidth = window.innerWidth;
 
   if (screenWidth <= 500) {
-    element1.style.left = "-40%";
-    element1.style.height = "550px";
-    element1.style.top = "180px";
+    element1.style.left = "-230px";
+    element1.style.height = "500px";
+    element1.style.top = "290px";
     element1.style.position = "absolute";
   element1.style.transition = "left 0.4s ease, top 0.2s ease, height 0.2s ease";
 
-    element2.style.right = "16%";
-    element2.style.height = "800px";
-    element2.style.top = "130px";
+    element2.style.right = "5%";
+    element2.style.height = "700px";
+    element2.style.top = "190px";
     element2.style.position = "absolute";
   element2.style.transition = "right 0.4s ease, top 0.2s ease, height 0.2s ease";
   }
@@ -277,6 +291,10 @@ async function Kiir(megadottszoveg) {
 }
 
 function tovabbg() {
+  if(szogvoreg==0){
+    updateCharacterPositions();
+  }
+  else{updateCharacterPositionsOreg();  }
   if (dialogvege && !tovabbGombPressed) {
     tovabbGombPressed = true;
 
@@ -308,12 +326,14 @@ function valasztas() {
   valaszto.style.visibility = "visible";
   tovabbgomb.style.visibility = "hidden";
   updateCharacterPositions();
+  szogvoreg=0;
 }
 
 function elsova() {
   storytelling();
   Kiir(cutszoveg);
   updateCharacterPositionsOreg();
+  szogvoreg=1;
   console.log("Első választási lehetőség kiválasztva.");
 }
 
@@ -321,6 +341,7 @@ function masodikva() {
   storytelling();
   Kiir(cutszoveg);
   updateCharacterPositionsOreg();
+  szogvoreg=1;
   console.log("Második választási lehetőség kiválasztva.");
 }
 
@@ -328,6 +349,7 @@ function harmadikva() {
   storytelling();
   Kiir(cutszoveg);
   updateCharacterPositionsOreg();
+  szogvoreg=1;
   console.log("Harmadik választási lehetőség kiválasztva.");
 }
 
@@ -355,9 +377,12 @@ function kilakoltatas(dv) {
   hatter.style.backgroundImage = `url("kepek/tuskekilakoltatas.png")`;
   storytelling();
   updateCharacterPositions();
+  szogvoreg=0;
   element2.style.position = "absolute";
   element2.style.visibility = "hidden";
   element2.style.right = "-70%";
+
+  
   console.log("kilakoltatas: " + dv);
 
   const waitForDialogvege = new Promise((resolve) => {
@@ -408,6 +433,7 @@ function kilakoltatas(dv) {
 
 
             updateCharacterPositionsOreg();
+            szogvoreg=1;
 
             console.log("Első választási lehetőség kiválasztva.");
           }
@@ -439,6 +465,7 @@ function kilakoltatas(dv) {
         else if (dialogvegeCount === 3) {
           dialogvege = false;
           updateCharacterPositions();
+          szogvoreg=0;
           tovabbg();
           storytelling();
           karakternev.innerHTML = "Szög";
@@ -450,6 +477,7 @@ function kilakoltatas(dv) {
         else if (dialogvegeCount === 4) {
           storytelling();
           updateCharacterPositionsOreg();
+          szogvoreg=1;
           dialogvege = false;
           tovabbg();
           karakternev.innerHTML = "Tulaj";
@@ -461,6 +489,8 @@ function kilakoltatas(dv) {
         else if (dialogvegeCount === 5) {
           storytelling();
          updateCharacterPositions();
+         szogvoreg=0;
+         
           dialogvege = false;
           tovabbg();
           element2.style.position = "absolute";
@@ -469,7 +499,11 @@ function kilakoltatas(dv) {
 
           element2.style.transition = "0.6s ease"
           element2.style.transition = "right 3s ease, top 0.8s ease, height 0.7s ease";
-          element2.style.right = "-50%";
+          element2.style.right = "-110%";
+          await sleep(1000);
+          element2.style.visibility = "hidden";
+          
+          
           karakternev.innerHTML = "Szög";
           karakternev.style.color = "black";
           cutszoveg.style.color = "black";
@@ -482,6 +516,7 @@ function kilakoltatas(dv) {
           await sleep(2000)
           storytelling();
           updateCharacterPositions();
+          szogvoreg=0;
           dialogvege = false;
           tovabbg();
 
@@ -505,6 +540,7 @@ function kilakoltatas(dv) {
           fadeOn();
           storytelling();
           updateCharacterPositions();
+          szogvoreg=0;
           dialogvege = false;
           tovabbg();
           fade.classList.add("in");
@@ -514,7 +550,7 @@ function kilakoltatas(dv) {
           element1.style.visibility = "hidden";
           hud.style.visibility = "hidden";
           element2.style.visibility = "hidden";
-          hatter.style.backgroundPositionY = "0px"
+          
 
           itemmezo.style.visibility = "hidden";
           item1.style.visibility = "hidden";
@@ -534,13 +570,14 @@ function kilakoltatas(dv) {
           fadeOn();
           storytelling();
           updateCharacterPositions();
+          szogvoreg=0;
           dialogvege = false;
           tovabbg();
 
           fade.classList.add("in");
           await sleep(2000)
           HatterChange(hatter, "kepek/TUSKEMailbox1.png");
-          hatter.style.backgroundPositionY = "-200px"
+         
           element1.style.visibility = "visible";
           hud.style.visibility = "visible";
           element2.style.visibility = "hidden";
@@ -590,7 +627,7 @@ function kilakoltatas(dv) {
             item1.style.visibility = "hidden";
             item2.style.visibility = "hidden";
             item3.style.visibility = "hidden";
-            hatter.style.backgroundPositionY = "0px";
+           
             tovabbgomb.style.visibility = "hidden";
             szoveg = "";
             cutszoveg.style.visibility = "hidden";
@@ -614,6 +651,7 @@ function kilakoltatas(dv) {
           element2.style.visibility = "visible";
           element2.style.transition = "right 1s ease, top 0.2s ease, height 0.2s ease";
           updateCharacterPositionsOreg();
+          szogvoreg=1;
           dialogvege = false;
           karakternev.innerHTML = "Tulaj";
           cutszoveg.innerHTML = "";
