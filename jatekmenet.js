@@ -47,7 +47,7 @@ function textreszponziv() {
   }
   else if (screenWidth <= 500) {
     cutszoveg.style.fontSize = "18px";
-    tuskefeher.style.width = "390px";
+    tuskefeher.style.width = "370px";
     karakternev.style.fontSize = "28px";
     elsoValaszthato.style.fontSize = "18px";
     masodikValaszthato.style.fontSize = "18px";
@@ -55,7 +55,7 @@ function textreszponziv() {
     valaszto.style.right = "10%";
   } else if (screenWidth <= 800) {
     cutszoveg.style.fontSize = "20px";
-    tuskefeher.style.width = "500px";
+    tuskefeher.style.width = "480px";
     karakternev.style.fontSize = "32px";
     elsoValaszthato.style.fontSize = "20px";
     masodikValaszthato.style.fontSize = "20px";
@@ -70,6 +70,7 @@ function textreszponziv() {
     harmadikValaszthato.style.fontSize = "22px";
     valaszto.style.right = "34%";
   } else {
+   
     cutszoveg.style.fontSize = "25px";
     tuskefeher.style.width = "990px";
     karakternev.style.fontSize = "40px";
